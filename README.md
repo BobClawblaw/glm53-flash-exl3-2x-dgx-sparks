@@ -98,7 +98,12 @@ decode after the 114K prompt 37.9 tok/s (41.6), a 67K-token chat's turn 2 in 0.1
 the same as the published checkpoint; code about 5% slower, its replies shorter (247 tokens against 256) at the same
 draft rounds a reply. The greedy row is `ruler-ablit-c1-clean.json`, a clean boot; the first boot's ruler
 (`ruler-ablit-c1.json`, taken while a compile ran) read 64.4 / 50.9 on code and structured, and the sampled, 8- and
-16-stream rows come from that boot. The quality checks on the Ablit weights are in `ablit/suite/`.
+16-stream rows come from that boot. The same recipe on another pair (xspark03 and xspark04, the Ablit weights)
+measures 46.7 / 66.3 / 58.8 / 57.1 from this head (`pair-252/ruler-c1.json`).
+
+The quality checks on the Ablit weights (`ablit/suite/`), against the published checkpoint on the same image:
+GSM8K 246/250 (244), MMLU 292/342 (292), HumanEval 159/164 (156), IFEval 118/150 loose and 109 strict (118 / 111),
+tool calls 59/60 (59), JSON 30/30 (30), MGSM 221/240 (223). The abliteration costs nothing on these.
 
 ## What it serves
 
