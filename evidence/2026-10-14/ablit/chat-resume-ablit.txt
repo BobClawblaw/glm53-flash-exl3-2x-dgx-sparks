@@ -1,0 +1,6 @@
+turn 1: prompt 15421 cached 0 ttft 15.21s
+turn 2: prompt 15439 cached 15420 ttft 0.13s
+turn 3: prompt 15458 cached 15438 ttft 0.14s
+turn 1: prompt 67021 cached 0 ttft 67.44s
+turn 2: prompt 67033 cached 67020 ttft 0.14s
+turn 3: prompt 67047 cached 67032 ttft 0.15s

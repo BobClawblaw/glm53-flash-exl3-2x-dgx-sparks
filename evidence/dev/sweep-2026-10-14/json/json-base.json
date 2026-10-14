@@ -1,0 +1,205 @@
+{
+  "label": "json-base",
+  "started": "2026-10-14 17:25:31",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 73.65,
+        "p90": 75.43,
+        "peak": 75.43,
+        "min": 73.49,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 73.01,
+        "p90": 73.11,
+        "peak": 73.11,
+        "min": 72.95,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.59,
+        "p90": 9.6,
+        "peak": 9.6,
+        "min": 9.57,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 64.27,
+        "p90": 64.5,
+        "peak": 64.5,
+        "min": 64.24,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 63.87,
+        "p90": 63.89,
+        "peak": 63.89,
+        "min": 62.75,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "total_s": {
+        "median": 12.31,
+        "p90": 12.53,
+        "peak": 12.53,
+        "min": 12.3,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "sql": {
+      "decode_tok_s": {
+        "median": 63.48,
+        "p90": 64.59,
+        "peak": 64.59,
+        "min": 63.39,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 62.96,
+        "p90": 63.05,
+        "peak": 63.05,
+        "min": 62.18,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.04,
+        "p90": 9.15,
+        "peak": 9.15,
+        "min": 9.02,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 569,
+      "prompt_tokens": 76,
+      "spec": {}
+    },
+    "tooluse": {
+      "decode_tok_s": {
+        "median": 304380.37,
+        "p90": 363692.5,
+        "peak": 363692.5,
+        "min": 170734.99,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 63.8,
+        "p90": 63.84,
+        "peak": 63.84,
+        "min": 37.09,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.53,
+        "p90": 0.92,
+        "peak": 0.92,
+        "min": 0.53,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.53,
+        "p90": 0.92,
+        "peak": 0.92,
+        "min": 0.53,
+        "n": 3
+      },
+      "total_s": {
+        "median": 0.53,
+        "p90": 0.92,
+        "peak": 0.92,
+        "min": 0.53,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 34,
+      "prompt_tokens": 175,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 17:27:24"
+}

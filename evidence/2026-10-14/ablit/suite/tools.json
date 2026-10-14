@@ -1,0 +1,11 @@
+{
+ "name": "tools",
+ "score": 0.9833333333333333,
+ "cases": 60,
+ "passed": 59,
+ "seconds": 83.12390685081482,
+ "notes": [
+  "'Drive me from Austin to Dallas.': got [('get_directions', {'destination': 'dallas', 'origin': 'austin'})]"
+ ],
+ "details": {}
+}

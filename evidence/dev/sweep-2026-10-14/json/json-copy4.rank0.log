@@ -1,0 +1,425 @@
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-env.so) failed: libnccl-env.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+gx10:3026583:3026583 [0] NCCL INFO NCCL_SOCKET_IFNAME set to enp1s0f1np1
+gx10:3026583:3026583 [0] NCCL INFO cudaDriverVersion 13000
+gx10:3026583:3026583 [0] NCCL INFO NCCL version 2.30.7+cuda13.3
+gx10:3026583:3026583 [0] NCCL INFO NCCL git version HEAD a5187fa2e
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-net.so) failed: libnccl-net.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+gx10:3026583:3026583 [0] NCCL INFO dlvsym failed on mlx5dv_get_data_direct_sysfs_path - /lib/aarch64-linux-gnu/libmlx5.so: undefined symbol: mlx5dv_get_data_direct_sysfs_path, version MLX5_1.25 version MLX5_1.25
+gx10:3026583:3026583 [0] NCCL INFO dlvsym failed on mlx5dv_reg_dmabuf_mr - /lib/aarch64-linux-gnu/libmlx5.so: undefined symbol: mlx5dv_reg_dmabuf_mr, version MLX5_1.25 version MLX5_1.25
+gx10:3026583:3026583 [0] NCCL INFO NCCL_IB_HCA set to rocep1s0f1,roceP2p1s0f1
+gx10:3026583:3026583 [0] NCCL INFO NET/IB: [1] rocep1s0f1:uverbs1:1/RoCE provider=Mlx5 speed=200000 context=0x219025b0 pciPath=/sys/devices/pci0000:00/0000:00:00.0/0000:01:00.0 ar=0 oooRqSize=0
+gx10:3026583:3026583 [0] NCCL INFO NET/IB: [3] roceP2p1s0f1:uverbs3:1/RoCE provider=Mlx5 speed=200000 context=0x21943cb0 pciPath=/sys/devices/pci0002:00/0002:00:00.0/0002:01:00.0 ar=0 oooRqSize=0
+gx10:3026583:3026583 [0] NCCL INFO NET/IB : Made virtual device [0] name=rocep1s0f1 speed=200000 ndevs=1 rail=-1 plane=-1
+gx10:3026583:3026583 [0] NCCL INFO NET/IB : Made virtual device [1] name=roceP2p1s0f1 speed=200000 ndevs=1 rail=-1 plane=-1
+gx10:3026583:3026583 [0] NCCL INFO NET/IB : Using [0]rocep1s0f1:1/RoCE [1]roceP2p1s0f1:1/RoCE [RO]; OOB enp1s0f1np1:10.0.0.20<0>
+gx10:3026583:3026583 [0] NCCL INFO Initialized NET plugin IB
+gx10:3026583:3026583 [0] NCCL INFO Assigned NET plugin IB to comm
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-rma.so) failed: libnccl-rma.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO RMA/Plugin: Could not find: libnccl-rma.so
+gx10:3026583:3026583 [0] NCCL INFO RMA/Plugin: Failed to load external plugin libnccl-rma.so, dlHandle: (nil), ncclRma: (nil)
+gx10:3026583:3026583 [0] NCCL INFO RMA/Plugin: Assigned plugin RMA_IB_PROXY to comm
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-gin.so) failed: libnccl-gin.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO GIN/Plugin: Could not find: libnccl-gin.so
+gx10:3026583:3026583 [0] NCCL INFO GIN/Plugin: Failed to load external plugin libnccl-gin.so, dlHandle: (nil), ncclGin: (nil)
+gx10:3026583:3026583 [0] NCCL INFO GIN/Plugin: Assigned plugin GIN_IB_GDAKI type 3 to comm
+gx10:3026583:3026583 [0] NCCL INFO Using network IB
+gx10:3026583:3026583 [0] NCCL INFO Loaded NVML from libnvidia-ml.so.1
+gx10:3026583:3026583 [0] NCCL INFO [Rank 0] ncclCommInitRank comm 0x1ee393e0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId f01000 commId 0x56f2c2fe14a062e7 - Init START
+gx10:3026583:3026583 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+gx10:3026583:3026583 [0] NCCL INFO NET/GIN_IB_GDAKI : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO NET/GIN_IB_GDAKI : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO NET/RMA_IB_PROXY : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO NET/RMA_IB_PROXY : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO NET/IB : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO NET/IB : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:3026583:3026583 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 0-19).
+gx10:3026583:3026583 [0] NCCL INFO info: memory guard: exit below 2.0 GiB available, no new requests below 5.0 GiB
+Rank 0: 2 Net devices
+gx10:3026583:3026583 [0] NCCL INFO Rank 0: 0 CollNet devices
+gx10:3026583:3026583 [0] NCCL INFO Local Net device counts across ranks: min 2 max 2
+gx10:3026583:3026583 [0] NCCL INFO Local CollNet device counts across ranks: min 0 max 0
+gx10:3026583:3026583 [0] NCCL INFO comm 0x1ee393e0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+gx10:3026583:3026583 [0] NCCL INFO Channel 00/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 01/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 02/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 03/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 04/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 05/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 06/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 07/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 08/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 09/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 10/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 11/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 12/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 13/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 14/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Channel 15/16 : 0 1
+gx10:3026583:3026583 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 1/-1/-1->0->-1 [5] 1/-1/-1->0->-1 [6] 1/-1/-1->0->-1 [7] 1/-1/-1->0->-1 [8] 1/-1/-1->0->-1 [9] 1/-1/-1->0->-1 [10] 1/-1/-1->0->-1 [11] 1/-1/-1->0->-1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1
+gx10:3026583:3026583 [0] NCCL INFO P2P Chunksize set to 262144
+gx10:3026583:3026583 [0] NCCL INFO Tuning P2P operations with maxP2pPeers = 2
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-profiler.so) failed: libnccl-profiler.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+gx10:3026583:3026583 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+gx10:3026583:3026604 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 9
+gx10:3026583:3026603 [0] NCCL INFO [Proxy Service] Device 0 CPU core 12
+gx10:3026583:3026603 [0] NCCL INFO proxy listening socket at 10.0.0.20<35669>
+gx10:3026583:3026583 [0] NCCL INFO ncclOsDlopen(libnccl-tuner.so) failed: libnccl-tuner.so: cannot open shared object file: No such file or directory
+gx10:3026583:3026583 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+gx10:3026583:3026583 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gx10:3026583:3026583 [0] NCCL INFO 16 coll channels, 16 collnet channels, 0 nvls channels, 16 p2p channels, 2 p2p channels per peer
+gx10:3026583:3026583 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, globalGinSupport 0, cuMemGdrSupport 0
+gx10:3026583:3026583 [0] NCCL INFO CC Off, workFifoBytes 1048576
+gx10:3026583:3026583 [0] NCCL INFO ncclCommInitRank comm 0x1ee393e0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId f01000 commId 0x56f2c2fe14a062e7 - Init COMPLETE
+gx10:3026583:3026583 [0] NCCL INFO Init timings - ncclCommInitRank: rank 0 nranks 2 total 0.30 (kernels 0.18, alloc 0.02, bootstrap 0.08, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.01, rest 0.00)
+gx10:3026583:3026583 [0] NCCL INFO Symmetric VA size=124GB
+gx10:3026583:3026606 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 13
+gx10:3026583:3026583 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 04/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 05/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 06/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 07/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 08/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 09/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 10/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 11/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 12/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 13/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 14/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 15/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 04/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 05/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 08/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 09/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 10/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026583 [0] NCCL INFO Channel 14/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:3026583:3026583 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc01a000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc05e000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc0a6000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc0ea000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc132000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc176000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc1be000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc202000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc24a000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9292 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9292 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bc0be ctsFifoLkey=0x1bc0be
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9292 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9293 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9294 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9295 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9295 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d372f ctsFifoLkey=0x1d372f
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9295 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9296 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9297 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9295 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9295 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ba2a0 ctsFifoLkey=0x1ba2a0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9295 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc3d9000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9292 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9296 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9297 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9298 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9298 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1ce4e3 ctsFifoLkey=0x1ce4e3
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9298 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9299 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9300 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc4eb000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9295 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9295 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc52f000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9298 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc574000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc5b5000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc5fa000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc63b000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc683000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc6c7000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc70f000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc753000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc79b000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc7df000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc827000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc86b000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc8b3000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc8f7000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc93f000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fc983000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fc9cb000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fca0f000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xf233fca57000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xf233fca9b000)
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9298 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9299 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9301 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9301 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cbebc ctsFifoLkey=0x1cbebc
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9301 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9300 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9300 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ba5a2 ctsFifoLkey=0x1ba5a2
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9300 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9302 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9302 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d1614 ctsFifoLkey=0x1d1614
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9302 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9301 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9301 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bb3b1 ctsFifoLkey=0x1bb3b1
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9301 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9303 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9303 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cc6c5 ctsFifoLkey=0x1cc6c5
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9303 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9302 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9302 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b2624 ctsFifoLkey=0x1b2624
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9302 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9304 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9304 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cabaa ctsFifoLkey=0x1cabaa
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9304 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9303 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9303 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bd2d0 ctsFifoLkey=0x1bd2d0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9303 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9305 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9306 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9301 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9300 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9304 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9305 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9307 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9308 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9306 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9307 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9302 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9301 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9303 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9309 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9310 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9302 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9308 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9309 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9304 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9311 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9312 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9310 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9310 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1abab9 ctsFifoLkey=0x1abab9
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9310 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9311 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9312 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9303 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9310 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9313 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9313 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cf1e8 ctsFifoLkey=0x1cf1e8
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9313 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9314 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9315 pkey=0 pd=0xf233fc2a0c40
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9313 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 9313 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1adbd8 ctsFifoLkey=0x1adbd8
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 9313 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=9316 pkey=0 pd=0xf233fc2a0c40 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 9316 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1ce9df ctsFifoLkey=0x1ce9df
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 9316 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9313 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 9313 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9314 pkey=0 pd=0xf233fc05ded0 oooRq=0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=9315 pkey=0 pd=0xf233fc05ded0
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 9316 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:3026583:3026603 [0] NCCL INFO NET/IB: nccinfo: RoCE all-gather: 2 HCA(s), shards up to 4096 KiB by RDMA writes
+info: dflash2: drafter loaded from /home/user/.cache/glm-dflash2/bf582e4eacc1810f76656d1811693ff6c6737d2a, linears at 4 bits (0.37 GiB on the device, 151 MiB of codebooks on the host)
+info: glm costs: window 1/2/4/8 rows 30.2/38.7/49.5/68.5 ms; 16 streams x 1/2/4/8 rows 122.8/179.6/250.3/346.7 ms; head step 0.49 ms
+info: glm: stream pool 16.57 GiB (rank 0 16.91, rank 1 21.18 GiB)
+info: glm: prompt chunks of 2048 rows (TF_GLM_PREFILL_ROWS), the EXL3 experts' prompt kernel fused
+[tensorfold] warning: non-loopback server has no API key; requests are open
+[tensorfold] CUDA sm_121 device 0 (NVIDIA GB10, memory shared with the host): model 82.14 GiB; 16 streams at once, 0.77 GiB each at a 1048576-token window, of 16.9 GiB left after a 12.0 GiB reserve; prompts in 2048-row chunks, no prompt cache; own glue kernels
+[tensorfold] serving GLM-5.3-Flash-EXL3 at http://0.0.0.0:8888/v1 (sampling: temperature 1.0, top_p 0.95; drafts: on; context: 1048576; loaded in 239.9s)
+[tensorfold] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /slots HTTP/1.1" 404 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-16cf1055d114ae2e14142e8d8eb64c0f prompt=61 cached=0 thinking=True effort=low tokens=64 sha=56455d322ca2 finish=length rounds=15 accepted=48/49
+[tensorfold] done chatcmpl-db7c67d19f539d342cc45f6b528fd996 prompt=61 cached=0 thinking=True effort=low tokens=64 sha=e88efbb9bb5b finish=length rounds=15 accepted=48/49
+[tensorfold] done chatcmpl-303a973b623924505b3684ade431779d prompt=61 cached=0 thinking=True effort=low tokens=64 sha=bdfc4a29f9c5 finish=length rounds=17 accepted=46/50
+[tensorfold] done chatcmpl-68fb91856151efbb91a051bd36e0ec16 prompt=61 cached=0 thinking=True effort=low tokens=64 sha=bdfc4a29f9c5 finish=length rounds=18 accepted=45/48
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-a4f65f135171edae7c0598ea2ee0b4e2 prompt=13623 cached=0 thinking=True effort=low tokens=3 sha=bba4809b1ae5 finish=stop rounds=1 accepted=1/2
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-b52fbfb7cb2a1c13df64d2b0849264e6 prompt=32 cached=0 thinking=True effort=low tokens=81 sha=923b23a19095 finish=stop rounds=12 accepted=69/81
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-4f4f914e61a8b69672abaf01e2be8fa9 prompt=57 cached=0 thinking=True effort=low tokens=700 sha=3a101a0f9358 finish=length rounds=126 accepted=573/735
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-0e07cfecf6ba89233f2b692bec4f0bc3 prompt=57 cached=56 thinking=True effort=low tokens=700 sha=3a101a0f9358 finish=length rounds=129 accepted=570/740
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-352e3916fb1378945040e1cd35083916 prompt=57 cached=56 thinking=True effort=low tokens=700 sha=3a101a0f9358 finish=length rounds=129 accepted=570/740
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-7b62d34d84ffe194fc8661ae1fc8c822 prompt=81 cached=0 thinking=True effort=low tokens=786 sha=d33842456b76 finish=stop rounds=170 accepted=616/1095
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-f2cc385fcad42fd5121f3f0f8771d550 prompt=81 cached=80 thinking=True effort=low tokens=786 sha=d33842456b76 finish=stop rounds=169 accepted=616/1099
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1087659cabe3bd0f03d5b85df5a66b5d prompt=81 cached=80 thinking=True effort=low tokens=786 sha=d33842456b76 finish=stop rounds=169 accepted=616/1109
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-adadcbc0da65941b676c3977357b9b60 prompt=76 cached=0 thinking=True effort=low tokens=569 sha=f53e670c1cfd finish=stop rounds=142 accepted=427/589
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-6fe169a04013f7f8a22d96d44e24e957 prompt=76 cached=75 thinking=True effort=low tokens=569 sha=f53e670c1cfd finish=stop rounds=145 accepted=424/581
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-ae9a7929de4a72345d9f0265dc04b367 prompt=76 cached=75 thinking=True effort=low tokens=569 sha=f53e670c1cfd finish=stop rounds=145 accepted=424/589
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-610dc96786514805a996a4985f97092a prompt=175 cached=0 thinking=True effort=low tokens=34 sha=93091e40c1de finish=stop rounds=6 accepted=28/42
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-5d11f5435e60fe7e790ff56955a8835d prompt=175 cached=174 thinking=True effort=low tokens=34 sha=93091e40c1de finish=stop rounds=8 accepted=26/31
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-716b1557e312764c6d5bd6097e10acca prompt=175 cached=174 thinking=True effort=low tokens=34 sha=93091e40c1de finish=stop rounds=8 accepted=26/31
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /metrics HTTP/1.1" 200 -

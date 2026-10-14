@@ -1,0 +1,205 @@
+{
+  "label": "json-win8",
+  "started": "2026-10-14 17:58:41",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 77.23,
+        "p90": 77.5,
+        "peak": 77.5,
+        "min": 77.01,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 76.42,
+        "p90": 76.63,
+        "peak": 76.63,
+        "min": 74.95,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.16,
+        "p90": 9.34,
+        "peak": 9.34,
+        "min": 9.13,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 75.38,
+        "p90": 75.56,
+        "peak": 75.56,
+        "min": 75.15,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 74.63,
+        "p90": 75.02,
+        "peak": 75.02,
+        "min": 72.99,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "total_s": {
+        "median": 10.53,
+        "p90": 10.77,
+        "peak": 10.77,
+        "min": 10.48,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "sql": {
+      "decode_tok_s": {
+        "median": 66.54,
+        "p90": 67.42,
+        "peak": 67.42,
+        "min": 66.49,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 65.98,
+        "p90": 66.06,
+        "peak": 66.06,
+        "min": 64.77,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 8.62,
+        "p90": 8.78,
+        "peak": 8.78,
+        "min": 8.61,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 569,
+      "prompt_tokens": 76,
+      "spec": {}
+    },
+    "tooluse": {
+      "decode_tok_s": {
+        "median": 182053.9,
+        "p90": 185209.09,
+        "peak": 185209.09,
+        "min": 174035.04,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 64.81,
+        "p90": 67.41,
+        "peak": 67.41,
+        "min": 42.98,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.52,
+        "p90": 0.79,
+        "peak": 0.79,
+        "min": 0.5,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.52,
+        "p90": 0.79,
+        "peak": 0.79,
+        "min": 0.5,
+        "n": 3
+      },
+      "total_s": {
+        "median": 0.52,
+        "p90": 0.79,
+        "peak": 0.79,
+        "min": 0.5,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 34,
+      "prompt_tokens": 175,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 18:00:26"
+}

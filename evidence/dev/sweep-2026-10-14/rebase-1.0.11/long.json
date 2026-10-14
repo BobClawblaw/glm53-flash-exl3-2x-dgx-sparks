@@ -1,0 +1,23 @@
+{
+ "w1200": {
+  "prompt_tokens": 1373,
+  "completion_tokens": 67,
+  "seconds": 2.7,
+  "sha": "26f4ce33960f",
+  "reply": "The vault code is 4471, and the ferry leaves at 17 past the hour.\n\nSummary of the notes: The vault code is 4471, and the ferry departs at 17 past the hour. The rest of the text consists of a long stream of unrelated words with no additional instructions or information."
+ },
+ "w4000": {
+  "prompt_tokens": 4466,
+  "completion_tokens": 135,
+  "seconds": 7.4,
+  "sha": "ebd0eff2c5e7",
+  "reply": "The vault code is 4471, and the ferry leaves at 17 past the hour.\n\nThe notes consist of long, repetitive sequences of nature- and object-themed words\u2014such as \"forest,\" \"bramble,\" \"compass,\" \"velvet,\" \"glacier,\" \"candle,\" \"orbit,\" \"walnut,\" and \"ledger\"\u2014arranged without any apparent grammatical structure or narrative meaning. Scattered within these word streams are a few functional details: the vault code 4471 and the ferry departure time of 17 past the hour. The overall effect resembles a cipher or distractor text, where meaningful information is deliberately buried in noise."
+ },
+ "w16000": {
+  "prompt_tokens": 17701,
+  "completion_tokens": 160,
+  "seconds": 20.7,
+  "sha": "eea8a184b928",
+  "reply": "# Answers\n\n**Vault code:** 4471\n\n**Ferry departure:** 17 past the hour\n\n# Summary of the Notes\n\nThe notes consist of a long stream of repeated vocabulary words \u2014 including forest, bramble, compass, velvet, ledger, glacier, candle, orbit, walnut, engine, saddle, pepper, copper, river, signal, meadow, cinder, ribbon, lantern, garden, timber, harbor, anchor, marble, quarry, thunder, violet, stone, and cloud \u2014 with no coherent sentences or narrative content. The only meaningful information embedded in the text is the vault code (4471) and the ferry departure time (17 past the hour), both of which appear as brief interruptions in the word stream. The remainder of the text appears to be"
+ }
+}
