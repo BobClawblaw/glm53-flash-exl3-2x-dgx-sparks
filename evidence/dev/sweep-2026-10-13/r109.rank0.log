@@ -1,0 +1,548 @@
+info: memory guard: exit below 2.0 GiB available, no new requests below 5.0 GiB
+info: RoCE all-gather: 2 HCA(s), shards up to 512 KiB by RDMA writes
+info: dflash2: drafter loaded from /home/user/.cache/glm-dflash2/bf582e4eacc1810f76656d1811693ff6c6737d2a, linears at 4 bits (0.56 GiB on the device, 151 MiB of codebooks on the host)
+info: glm costs: window 1/2/4/8 rows 30.5/39.7/50.6/72.8 ms; 16 streams x 1/2/4/8 rows 122.9/188.0/257.5/356.4 ms; head step 0.74 ms
+info: glm: stream pool 15.18 GiB (rank 0 15.49, rank 1 20.91 GiB)
+[tensorfold] warning: non-loopback server has no API key; requests are open
+[tensorfold] CUDA sm_121 device 0 (NVIDIA GB10, memory shared with the host): model 82.33 GiB; 16 streams at once, 0.77 GiB each at a 1048576-token window, of 15.5 GiB left after a 12.0 GiB reserve; prompts in passes of up to 2048 rows, no prompt cache; own glue kernels
+[tensorfold] serving GLM-5.3-Flash-EXL3 at http://0.0.0.0:8888/v1 (sampling: temperature 1.0, top_p 0.95; drafts: on; context: 1048576; loaded in 241.6s)
+[tensorfold] 192.0.2.242 "GET /slots HTTP/1.1" 404 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "GET /health HTTP/1.1" 200 -
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-5ae57eef1fdf9ef0a1474f108669934b prompt=26 cached=0 thinking=False effort=none tokens=243 sha=38bc29008146 finish=stop rounds=107 accepted=135/235
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-9e01aa09f9bed9866d48cf7458c428e6 prompt=26 cached=0 thinking=False effort=none tokens=251 sha=f7f48be266f0 finish=stop rounds=94 accepted=157/225
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 44.88 ms each, 3.18 rows (1.00 streams); 258 drafts, 5.67 ms each, 2.18 drafted a stream
+info: glm drafts: 558 verified, 354 landed (0.63), their chances said 0.87
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.65; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 264 rounds, 5.70 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 26.68 GiB available (lowest 21.83); pool 0.86 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 83.19 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-723cd8624504e40f8beaa582e91e3204 prompt=27 cached=0 thinking=False effort=none tokens=250 sha=2d9c9c0df4f2 finish=stop rounds=123 accepted=127/217
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-8e563c1d14a2178595c1d49bf51ed071 prompt=26 cached=0 thinking=False effort=none tokens=256 sha=80f89bcde3a2 finish=length rounds=103 accepted=152/217
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 43.89 ms each, 2.96 rows (1.00 streams); 258 drafts, 5.81 ms each, 1.96 drafted a stream
+info: glm drafts: 501 verified, 317 landed (0.63), their chances said 0.85
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.65; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 258 rounds, 5.81 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 26.11 GiB available (lowest 21.83); pool 1.43 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 83.76 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-74465943fee27ee3048a82745caa2fa9 prompt=28 cached=0 thinking=False effort=none tokens=256 sha=f07b61aad032 finish=length rounds=122 accepted=133/226
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-4a22ac8e002d06fa4adaac872117dbfc prompt=27 cached=0 thinking=False effort=none tokens=256 sha=9cdd22cbf76e finish=length rounds=105 accepted=150/227
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 43.85 ms each, 2.94 rows (1.00 streams); 258 drafts, 5.82 ms each, 1.93 drafted a stream
+info: glm drafts: 496 verified, 292 landed (0.59), their chances said 0.85
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.59; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 258 rounds, 5.82 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 25.49 GiB available (lowest 21.83); pool 2.00 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 84.34 GiB
+[tensorfold] done chatcmpl-0edbb3be7542e8a75e850c192cd4f05c prompt=27 cached=0 thinking=False effort=none tokens=235 sha=7265ccbb26b7 finish=stop rounds=119 accepted=116/218
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-d5a1f160100592742457012aeb265f7e prompt=26 cached=0 thinking=False effort=none tokens=256 sha=30d22fa1ed90 finish=length rounds=124 accepted=132/217
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-901141961df0bac012ae972d3239bd5c prompt=29 cached=0 thinking=False effort=none tokens=256 sha=3a7f0f0443ac finish=length rounds=122 accepted=133/240
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 43.02 ms each, 2.89 rows (1.00 streams); 259 drafts, 5.78 ms each, 1.89 drafted a stream
+info: glm drafts: 484 verified, 279 landed (0.58), their chances said 0.85
+info: glm copies: 0 of 259 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.59; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 259 by the MTP head
+info: glm dflash2: 259 rounds, 5.77 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 24.63 GiB available (lowest 21.83); pool 2.86 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 85.19 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-0fcc6b7de81ffb9dc2ab50a1afd60fcb prompt=26 cached=0 thinking=False effort=none tokens=256 sha=e8fe03db4e33 finish=length rounds=113 accepted=143/240
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-b069d59ab2711888060b7ad7eafaa8c9 prompt=27 cached=0 thinking=False effort=none tokens=256 sha=d603902a787c finish=length rounds=106 accepted=149/221
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 44.59 ms each, 3.07 rows (1.00 streams); 258 drafts, 5.73 ms each, 2.07 drafted a stream
+info: glm drafts: 530 verified, 340 landed (0.64), their chances said 0.88
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.63; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 258 rounds, 5.73 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 24.09 GiB available (lowest 21.83); pool 3.43 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 85.77 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-6906060dc34cf9553113c7e0134624ff prompt=27 cached=0 thinking=False effort=none tokens=256 sha=29a5a36170e1 finish=length rounds=97 accepted=158/239
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-d31b74c8e37483d732f942e997a07722 prompt=27 cached=0 thinking=False effort=none tokens=256 sha=a58de45f956a finish=stop rounds=121 accepted=135/246
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 44.97 ms each, 3.17 rows (1.00 streams); 258 drafts, 5.81 ms each, 2.16 drafted a stream
+info: glm drafts: 556 verified, 332 landed (0.60), their chances said 0.86
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.60; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 258 rounds, 5.80 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 23.49 GiB available (lowest 21.83); pool 4.01 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 86.34 GiB
+[tensorfold] done chatcmpl-a2c0b2b51762282c06b29c80f00d6edb prompt=27 cached=0 thinking=False effort=none tokens=256 sha=f79ab975a94d finish=length rounds=115 accepted=140/224
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-4b15d0493dfa00c8167850d170f737e3 prompt=27 cached=0 thinking=False effort=none tokens=256 sha=25b689f2c13c finish=length rounds=115 accepted=140/233
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 44.57 ms each, 3.01 rows (1.00 streams); 258 drafts, 5.82 ms each, 2.01 drafted a stream
+info: glm drafts: 515 verified, 321 landed (0.62), their chances said 0.86
+info: glm copies: 0 of 258 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.61; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 258 by the MTP head
+info: glm dflash2: 258 rounds, 5.82 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 22.96 GiB available (lowest 21.83); pool 4.58 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 86.91 GiB
+[tensorfold] done chatcmpl-21871a3a21c42568c790090cff2ff87c prompt=27 cached=0 thinking=False effort=none tokens=256 sha=029f2b1bbfed finish=length rounds=115 accepted=141/231
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-2b3cd8106d37716d801a259a96ac9d34 prompt=36 cached=0 thinking=False effort=none tokens=256 sha=08f6e43dee46 finish=length rounds=63 accepted=192/265
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-efe2725a8d95412b891516d89579d96f prompt=29 cached=0 thinking=False effort=none tokens=256 sha=c5ab79c1b94c finish=length rounds=59 accepted=196/261
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-7803287a27507716f774ee594871f74b prompt=30 cached=0 thinking=False effort=none tokens=256 sha=fd778ac38fcb finish=length rounds=56 accepted=199/268
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-949872702325041b70a4972301550e4b prompt=35 cached=0 thinking=False effort=none tokens=256 sha=3a3d1f8907b7 finish=length rounds=59 accepted=197/252
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 59.23 ms each, 5.28 rows (1.00 streams); 261 drafts, 5.75 ms each, 3.96 drafted a stream
+info: glm drafts: 1085 verified, 807 landed (0.74), their chances said 0.86
+info: glm copies: 0 of 261 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.73; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.74 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 21.44 GiB available (lowest 21.44); pool 6.01 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 88.34 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-c09e179d313260965d273a08ae185f88 prompt=32 cached=0 thinking=False effort=none tokens=256 sha=437a9b3fc786 finish=length rounds=57 accepted=199/256
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-935c3c66eb2ca3b577ac7f0a3bad297d prompt=31 cached=0 thinking=False effort=none tokens=256 sha=b7c590e78512 finish=length rounds=53 accepted=202/253
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-f819817dae07e356d5f246a70938b46d prompt=27 cached=0 thinking=False effort=none tokens=256 sha=2f885ecfcabc finish=length rounds=63 accepted=192/269
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1f4a9cce1eb032e0141661df93e31cd5 prompt=30 cached=0 thinking=False effort=none tokens=256 sha=63e65403ae4e finish=length rounds=50 accepted=206/264
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 61.69 ms each, 5.73 rows (1.00 streams); 260 drafts, 5.70 ms each, 4.28 drafted a stream
+info: glm drafts: 1181 verified, 934 landed (0.79), their chances said 0.86
+info: glm copies: 1 of 260 draft rounds copied (1.00 tokens each), copied drafts land 0.80, the drafter's 0.78; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 260 by the MTP head
+info: glm dflash2: 260 rounds, 5.70 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 20.30 GiB available (lowest 20.25); pool 7.15 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 89.49 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-b3bb7d7a76f62c5b09706ac58675cac4 prompt=32 cached=0 thinking=False effort=none tokens=256 sha=b75f5b49c798 finish=length rounds=52 accepted=203/244
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-eb3e5782cfee8ccb34fcc38ee2524e92 prompt=32 cached=0 thinking=False effort=none tokens=256 sha=623fced70142 finish=length rounds=54 accepted=201/244
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1bb63e04a5af8846dd1ea1bed469656c prompt=33 cached=0 thinking=False effort=none tokens=256 sha=0f4c80b11404 finish=length rounds=47 accepted=208/286
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1cd20bcf1c492d839a3b4ebeb13c23e8 prompt=31 cached=0 thinking=False effort=none tokens=256 sha=0de51ffd0f41 finish=length rounds=59 accepted=197/284
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-94a65be807cbe0b74e6f5660c0076178 prompt=31 cached=0 thinking=False effort=none tokens=256 sha=c2d44bb3b9df finish=length rounds=56 accepted=199/243
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 63.74 ms each, 5.96 rows (1.00 streams); 261 drafts, 5.78 ms each, 4.41 drafted a stream
+info: glm drafts: 1211 verified, 968 landed (0.80), their chances said 0.87
+info: glm copies: 1 of 261 draft rounds copied (1.00 tokens each), copied drafts land 0.80, the drafter's 0.80; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.78 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 18.84 GiB available (lowest 18.81); pool 8.58 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 90.92 GiB
+[tensorfold] done chatcmpl-dbf2b5d17637ac1311303a9efe4bddcf prompt=29 cached=0 thinking=False effort=none tokens=256 sha=2d2bad3fa26a finish=length rounds=48 accepted=207/255
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-573b986794ce6eab20dbc38574780e2f prompt=33 cached=0 thinking=False effort=none tokens=256 sha=9352e6a60294 finish=length rounds=65 accepted=190/276
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-6ef24df8bb60152bf6f9409048b72a43 prompt=32 cached=0 thinking=False effort=none tokens=256 sha=65484576c0bb finish=length rounds=46 accepted=210/277
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-156bf3bcc63620ca54a50bbdc1a0808e prompt=41 cached=0 thinking=False effort=none tokens=191 sha=1d0135f8a0bb finish=stop rounds=62 accepted=129/196
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-e8b8a7c590586dd59603cde0d2f4bbc9 prompt=43 cached=0 thinking=False effort=none tokens=135 sha=96975b47abb2 finish=stop rounds=46 accepted=89/144
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 57.18 ms each, 5.16 rows (1.00 streams); 261 drafts, 5.71 ms each, 3.68 drafted a stream
+info: glm drafts: 993 verified, 698 landed (0.70), their chances said 0.86
+info: glm copies: 2 of 261 draft rounds copied (1.00 tokens each), copied drafts land 0.80, the drafter's 0.73; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.70 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 17.37 GiB available (lowest 17.37); pool 10.01 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 92.35 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-ec6731584cefcea81add706c1722c96c prompt=41 cached=0 thinking=False effort=none tokens=169 sha=f563c00115c2 finish=stop rounds=55 accepted=114/169
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1ae6a2a79d5ef0999466bd3af231c530 prompt=42 cached=0 thinking=False effort=none tokens=167 sha=c0323bf86f07 finish=stop rounds=56 accepted=111/175
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-ee8f4d8e96bd255dfe7c07d089083479 prompt=43 cached=0 thinking=False effort=none tokens=217 sha=65fdec503e6c finish=stop rounds=80 accepted=136/227
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-7dc28a1981e29438971cf983b4118cb7 prompt=42 cached=0 thinking=False effort=none tokens=144 sha=0b2d2ab3f81c finish=stop rounds=49 accepted=95/130
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-211f5a01f6515c63a38c901e69aaf5c4 prompt=40 cached=0 thinking=False effort=none tokens=133 sha=335350ca4401 finish=stop rounds=35 accepted=98/132
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 48.98 ms each, 3.92 rows (1.00 streams); 261 drafts, 5.59 ms each, 2.84 drafted a stream
+info: glm drafts: 747 verified, 501 landed (0.67), their chances said 0.87
+info: glm copies: 0 of 261 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.70; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.59 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 15.87 GiB available (lowest 15.87); pool 11.45 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 93.78 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-5b9f79adceee79b6a0543587487144b6 prompt=42 cached=0 thinking=False effort=none tokens=176 sha=0e992716a084 finish=stop rounds=64 accepted=112/153
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-c3a00f608fbba5d1b24169265325954e prompt=44 cached=0 thinking=False effort=none tokens=154 sha=a96c245057ce finish=stop rounds=52 accepted=101/145
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-f0f24cd345cd2882a8cd0a6f5a63204c prompt=42 cached=0 thinking=False effort=none tokens=160 sha=f55967b7354e finish=stop rounds=48 accepted=112/166
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-3cfaf07cce110f6abdcbe894abfbe9b8 prompt=40 cached=0 thinking=False effort=none tokens=159 sha=48fc4a9e80df finish=stop rounds=49 accepted=110/141
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 48.81 ms each, 3.83 rows (1.00 streams); 260 drafts, 5.62 ms each, 2.77 drafted a stream
+info: glm drafts: 724 verified, 525 landed (0.73), their chances said 0.89
+info: glm copies: 0 of 260 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.73; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 260 by the MTP head
+info: glm dflash2: 260 rounds, 5.61 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 14.76 GiB available (lowest 14.74); pool 12.59 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 94.92 GiB
+[tensorfold] done chatcmpl-e1e3ecad754c26ada2865e0cab85598d prompt=41 cached=0 thinking=False effort=none tokens=147 sha=513e6c5d013a finish=stop rounds=46 accepted=101/127
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-733d28d7119495b52c1fa4f6b3d565e9 prompt=41 cached=0 thinking=False effort=none tokens=173 sha=31d19fbc8010 finish=stop rounds=61 accepted=112/161
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-713eabcdd68be1c15b32321d2cc27a4a prompt=42 cached=0 thinking=False effort=none tokens=154 sha=c19d71ad3875 finish=stop rounds=46 accepted=108/142
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-c123ba7ae0199bb6075dec3c46ee4dfa prompt=44 cached=0 thinking=False effort=none tokens=179 sha=cefa3161810c finish=stop rounds=51 accepted=128/159
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-d8cb8c1b5f9b3720fa64a44db3fe4606 prompt=41 cached=0 thinking=False effort=none tokens=134 sha=c32319789a89 finish=stop rounds=40 accepted=94/114
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 48.96 ms each, 3.97 rows (1.00 streams); 261 drafts, 5.53 ms each, 2.92 drafted a stream
+info: glm drafts: 760 verified, 567 landed (0.75), their chances said 0.90
+info: glm copies: 0 of 261 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.73; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.52 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 13.29 GiB available (lowest 13.24); pool 14.02 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 96.36 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-555919da09580e5486b8e0ffdd3647d3 prompt=20 cached=0 thinking=False effort=none tokens=207 sha=0a1d5ad71aa1 finish=stop rounds=69 accepted=138/216
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-e70419e16b917ff17446cdda72f7818c prompt=21 cached=0 thinking=False effort=none tokens=198 sha=62e30cafe166 finish=stop rounds=37 accepted=161/190
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-f9aeb496e639936918388f64fdcb1796 prompt=21 cached=0 thinking=False effort=none tokens=171 sha=4c79c578d838 finish=stop rounds=35 accepted=136/183
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-a7379977c8c2e8052b5bf355ba88bdd3 prompt=21 cached=0 thinking=False effort=none tokens=167 sha=b1fae259b14c finish=stop rounds=39 accepted=128/179
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-db7e6233c9c812279bc91f598929c888 prompt=20 cached=0 thinking=False effort=none tokens=255 sha=d07a5bc3a8d0 finish=stop rounds=84 accepted=170/236
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 56.75 ms each, 4.77 rows (1.00 streams); 261 drafts, 5.80 ms each, 3.64 drafted a stream
+info: glm drafts: 966 verified, 707 landed (0.73), their chances said 0.89
+info: glm copies: 0 of 261 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.72; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 261 by the MTP head
+info: glm dflash2: 261 rounds, 5.79 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 12.10 GiB available (lowest 12.09); pool 15.17 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 97.50 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-8be835f3e98ef8b26f41a94242f1099b prompt=21 cached=0 thinking=False effort=none tokens=231 sha=5e15a4e8a8b2 finish=stop rounds=79 accepted=152/229
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-e6f411594f188bcbf55f82977b603542 prompt=20 cached=0 thinking=False effort=none tokens=207 sha=614710f51962 finish=stop rounds=63 accepted=144/231
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-36dfddd573bf91413399c09ca54dbd4f prompt=20 cached=0 thinking=False effort=none tokens=234 sha=32945033ae20 finish=stop rounds=77 accepted=157/287
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-6e35eedf7202e178ecc750399e13c171 prompt=22 cached=0 thinking=False effort=none tokens=224 sha=4d92f7c34f63 finish=stop rounds=69 accepted=155/236
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 53.52 ms each, 4.54 rows (1.00 streams); 260 drafts, 5.63 ms each, 3.41 drafted a stream
+info: glm drafts: 907 verified, 557 landed (0.61), their chances said 0.87
+info: glm copies: 0 of 260 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.65; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 260 by the MTP head
+info: glm dflash2: 260 rounds, 5.62 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 12.13 GiB available (lowest 12.06); pool 15.17 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 97.50 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-b9196d44adcad4c18fad01f36e0c1b33 prompt=21 cached=0 thinking=False effort=none tokens=252 sha=a599ba004999 finish=stop rounds=88 accepted=164/264
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-1d178cefc7bfcbaf10b12c364aeaed2e prompt=20 cached=0 thinking=False effort=none tokens=220 sha=fa31e20cf3ff finish=stop rounds=66 accepted=154/231
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-50af4c9720377bf109a46ba7b2c08670 prompt=21 cached=0 thinking=False effort=none tokens=210 sha=44026ee4018a finish=stop rounds=60 accepted=150/215
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-4c73d154a83f4859bd8c79948f4ecca2 prompt=20 cached=0 thinking=False effort=none tokens=185 sha=c0be0e96249f finish=stop rounds=47 accepted=138/170
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+info: glm trace: 256 verifies, 52.09 ms each, 4.25 rows (1.00 streams); 260 drafts, 5.55 ms each, 3.18 drafted a stream
+info: glm drafts: 833 verified, 583 landed (0.70), their chances said 0.89
+info: glm copies: 0 of 260 draft rounds copied (0.00 tokens each), copied drafts land 0.80, the drafter's 0.70; 0 out of step
+info: glm draws: 0 sampled verifies, 0.00 ms gpu + 0.00 ms host each, 0 rows, 0 full rows, 0 check mismatches
+info: glm mix: 0 stream rounds by DFlash2, 260 by the MTP head
+info: glm dflash2: 260 rounds, 5.54 ms each (context 0.00, tables 0.00, layers 0.00, head 0.00, selector 0.00); 0 streams' contexts restarted
+info: glm memory: 12.14 GiB available (lowest 12.06); pool 15.17 of 15.18 GiB; 23 graphs (23 captured, 0 updated in place, 0 dropped, 116 ms capturing); device 97.50 GiB
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-b44100400797ca422a8d397b88a5a3a0 prompt=21 cached=0 thinking=False effort=none tokens=256 sha=f14ac0ef16ab finish=length rounds=103 accepted=152/249
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-5e81b2cd149a880de0ff738c6ec9fa3c prompt=21 cached=0 thinking=False effort=none tokens=237 sha=67df84ea64c5 finish=stop rounds=68 accepted=169/258
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /metrics HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /v1/models HTTP/1.1" 200 -
+[tensorfold] 192.0.2.242 "GET /health HTTP/1.1" 200 -
+[tensorfold] done chatcmpl-98572a4944c2c231cb8a3fe4d50c7e6f prompt=21 cached=0 thinking=False effort=none tokens=231 sha=2cd04f10f8fa finish=stop rounds=76 accepted=155/238

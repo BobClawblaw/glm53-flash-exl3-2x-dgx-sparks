@@ -1,0 +1,8 @@
+quality suite: http://127.0.0.1:8888 as GLM-5.3-Flash-EXL3; checks: mgsm, mmlu, math500, gpqa, humaneval, repetition, long-context, long-tasks, soak, snapshot, vision, docvision, concurrent, vision-concurrent
+mgsm             217/240     90.4%  (378s)  de 27/30, es 29/30, fr 25/30, ja 27/30, zh 28/30, ru 29/30, sw 24/30, bn 28/30
+mmlu             294/342     86.0%  (514s)  57 subjects x 6; weakest business_ethics 3/6, college_chemistry 3/6, virology 3/6
+math500          442/500     88.4%  (2048s)  L1 41/43 L2 82/90 L3 97/105 L4 115/128 L5 107/134, 11 without a boxed answer
+gpqa             140/198     70.7%  (2581s)  Biology 12/19, Chemistry 53/93, Physics 75/86, 37 without an answer
+humaneval        157/164     95.7%  (247s)  pass@1 greedy; failed ['HumanEval_130', 'HumanEval_132', 'HumanEval_145', 'HumanEval_158', 'HumanEval_163', 'HumanEval_50'] ...
+repetition         8/8      100.0%  (77s)  repeated 4-grams 0.25% mean, max 0.82%; 0 replies hit max_tokens
+long-context      55/55     100.0%  (5913s)  needles 15/15 to 200k, facts 10/10@25k, 10/10@51k, 10/10@102k, 10/10@200k, slowest prefill 257 tok/s

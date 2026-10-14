@@ -1,0 +1,27 @@
+{
+ "url": "http://127.0.0.1:8888",
+ "max_tokens": 256,
+ "runs": 2,
+ "cells": [
+  {
+   "concurrency": 1,
+   "phase": "structured",
+   "per_stream": 45.79088916688356,
+   "aggregate": 45.79088916688356,
+   "wall": 44.38858747776517,
+   "ttft": 0.17327272950205952,
+   "tokens_mean": 215.0,
+   "runs": 2
+  },
+  {
+   "concurrency": 1,
+   "phase": "list",
+   "per_stream": 41.22459649617037,
+   "aggregate": 41.22459649617037,
+   "wall": 40.45868540086625,
+   "ttft": 0.1239304960181471,
+   "tokens_mean": 215.0,
+   "runs": 2
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+  "label": "prefill-dev6-fused",
+  "started": "2026-10-14 11:05:36",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "prefill": {
+    "2048": {
+      "prompt_tokens": 5943,
+      "ttft_s": 5.985,
+      "prefill_tok_s": 993.0
+    },
+    "8192": {
+      "prompt_tokens": 29868,
+      "ttft_s": 29.769,
+      "prefill_tok_s": 1003.3
+    },
+    "32768": {
+      "prompt_tokens": 113912,
+      "ttft_s": 118.189,
+      "prefill_tok_s": 963.8
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 11:08:28"
+}

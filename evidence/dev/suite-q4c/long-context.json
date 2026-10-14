@@ -1,0 +1,168 @@
+{
+ "name": "long-context",
+ "score": 1.0,
+ "cases": 55,
+ "passed": 55,
+ "seconds": 5912.55715918541,
+ "notes": [
+  "needles 15/15 to 200k, facts 10/10@25k, 10/10@51k, 10/10@102k, 10/10@200k, slowest prefill 257 tok/s"
+ ],
+ "details": {
+  "needles": [
+   {
+    "tokens": 6383,
+    "depth": 0.1,
+    "found": true,
+    "seconds": 24.273408291046508,
+    "prefill_tok_s": 262.96265952706915,
+    "reply": "74335"
+   },
+   {
+    "tokens": 6385,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 24.39793227298651,
+    "prefill_tok_s": 261.70250530080773,
+    "reply": "74335"
+   },
+   {
+    "tokens": 6411,
+    "depth": 0.9,
+    "found": true,
+    "seconds": 23.880140841996763,
+    "prefill_tok_s": 268.4657532976232,
+    "reply": "74335"
+   },
+   {
+    "tokens": 25428,
+    "depth": 0.1,
+    "found": true,
+    "seconds": 96.28650334500708,
+    "prefill_tok_s": 264.08685658558153,
+    "reply": "74335"
+   },
+   {
+    "tokens": 25443,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 95.84123209200334,
+    "prefill_tok_s": 265.4702933657598,
+    "reply": "74335"
+   },
+   {
+    "tokens": 25459,
+    "depth": 0.9,
+    "found": true,
+    "seconds": 96.56618499796605,
+    "prefill_tok_s": 263.64301334402137,
+    "reply": "74335"
+   },
+   {
+    "tokens": 50974,
+    "depth": 0.1,
+    "found": true,
+    "seconds": 194.24153259198647,
+    "prefill_tok_s": 262.4258536256162,
+    "reply": "74335"
+   },
+   {
+    "tokens": 51047,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 194.22295015101554,
+    "prefill_tok_s": 262.82681815052786,
+    "reply": "74335"
+   },
+   {
+    "tokens": 50997,
+    "depth": 0.9,
+    "found": true,
+    "seconds": 193.4279677339946,
+    "prefill_tok_s": 263.64853333997667,
+    "reply": "74335"
+   },
+   {
+    "tokens": 102074,
+    "depth": 0.02,
+    "found": true,
+    "seconds": 391.58387696300633,
+    "prefill_tok_s": 260.66956788837126,
+    "reply": "74335"
+   },
+   {
+    "tokens": 102116,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 391.2903118359973,
+    "prefill_tok_s": 260.97247212908303,
+    "reply": "74335"
+   },
+   {
+    "tokens": 102079,
+    "depth": 0.98,
+    "found": true,
+    "seconds": 390.8802312850021,
+    "prefill_tok_s": 261.15160560670887,
+    "reply": "7-4-3-3-5"
+   },
+   {
+    "tokens": 200359,
+    "depth": 0.02,
+    "found": true,
+    "seconds": 776.6388669029693,
+    "prefill_tok_s": 257.98219550739043,
+    "reply": "74335"
+   },
+   {
+    "tokens": 200458,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 780.5935067160171,
+    "prefill_tok_s": 256.80203367734055,
+    "reply": "74335"
+   },
+   {
+    "tokens": 200409,
+    "depth": 0.98,
+    "found": true,
+    "seconds": 780.5682584939641,
+    "prefill_tok_s": 256.7475654040443,
+    "reply": "7-4-3-3-5"
+   }
+  ],
+  "facts": [
+   {
+    "tokens": 25555,
+    "recalled": 10,
+    "of": 10,
+    "seconds": 98.2276477739797,
+    "prefill_tok_s": 260.16096872035115,
+    "reply": "Avery: 563\nBlake: 986\nCasey: 673\nDevin: 977\nEmery: 899\nFinley: 576\nHarper: 562\nJordan: 620\nKendall: 975\nMorgan: 701"
+   },
+   {
+    "tokens": 51102,
+    "recalled": 10,
+    "of": 10,
+    "seconds": 197.07130185101414,
+    "prefill_tok_s": 259.30716202723977,
+    "reply": "Avery: 563\nBlake: 986\nCasey: 673\nDevin: 977\nEmery: 899\nFinley: 576\nHarper: 562\nJordan: 620\nKendall: 975\nMorgan: 701"
+   },
+   {
+    "tokens": 102242,
+    "recalled": 10,
+    "of": 10,
+    "seconds": 394.60616125399247,
+    "prefill_tok_s": 259.0988434521448,
+    "reply": "Avery: 563\nBlake: 986\nCasey: 673\nDevin: 977\nEmery: 899\nFinley: 576\nHarper: 562\nJordan: 620\nKendall: 975\nMorgan: 701"
+   },
+   {
+    "tokens": 200644,
+    "recalled": 10,
+    "of": 10,
+    "seconds": 767.8827397159766,
+    "prefill_tok_s": 261.29510356517966,
+    "reply": "Avery: 563\nBlake: 986\nCasey: 673\nDevin: 977\nEmery: 899\nFinley: 576\nHarper: 562\nJordan: 620\nKendall: 975\nMorgan: 701"
+   }
+  ]
+ }
+}

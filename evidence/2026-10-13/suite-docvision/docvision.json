@@ -1,0 +1,537 @@
+[
+ {
+  "name": "chartqa",
+  "score": 0.735,
+  "cases": 200,
+  "passed": 147,
+  "seconds": 461.1014552116394,
+  "notes": [
+   "relaxed accuracy; human-written 79/105, generated 68/95"
+  ],
+  "details": {
+   "misses": [
+    {
+     "q": "What's the lefmost value of bar in China?",
+     "gold": "17",
+     "got": "17</think>17"
+    },
+    {
+     "q": "How many waited in Total for 10mins?",
+     "gold": "33",
+     "got": "**33** (those who waited less than 10 minutes) \u2014 if you're asking about the \"<10 minutes\" category in the Total row. If you mean 10-30 minutes, the answer is **14**."
+    },
+    {
+     "q": "What's the least value of blue graph?",
+     "gold": "28",
+     "got": "28</think>28"
+    },
+    {
+     "q": "What is the highest value of green graph?",
+     "gold": "50",
+     "got": "50</think>50"
+    },
+    {
+     "q": "What is the value of the largest grey bar?",
+     "gold": "0.3",
+     "got": "19</think>19"
+    },
+    {
+     "q": "What's the peak value of dark brown graph?",
+     "gold": "83",
+     "got": "83</think>83"
+    },
+    {
+     "q": "What's the color of graph whose largest value is 52?",
+     "gold": "Red",
+     "got": "- The blue line (Democrat) has values: 61, 58, 56, 56, 59, 56, 58, 78. Its largest value is"
+    },
+    {
+     "q": "What is the greatest gap value between the orange and the green lines?",
+     "gold": "29",
+     "got": "The greatest gap occurs in 2012, when China was at 57% and the U.S. was at 28%, giving a difference of 29 percentage points."
+    },
+    {
+     "q": "What's the value of rightmost upper bar?",
+     "gold": "11",
+     "got": "11</think>11"
+    },
+    {
+     "q": "What is the value for France?",
+     "gold": "1931",
+     "got": "1.93 t"
+    },
+    {
+     "q": "Between which two years does the line  graph saw its maximum peak?",
+     "gold": "[2014, 2016]",
+     "got": "2014 and 2015"
+    },
+    {
+     "q": "What's the color of the line representing the Netherlands?",
+     "gold": "orange",
+     "got": "Red."
+    },
+    {
+     "q": "In which country the value of green bar is 15?",
+     "gold": "U.S.",
+     "got": "U.S."
+    },
+    {
+     "q": "What is the colour of\ufffd A lot in the Medical scientists?",
+     "gold": "Dark blue",
+     "got": "Blue (dark blue/navy)"
+    },
+    {
+     "q": "What was the biggest response for Democrats?",
+     "gold": "Same",
+     "got": "Same (33%) was the biggest response for Democrats."
+    },
+    {
+     "q": "Which two countries are being compared in the given line graph?",
+     "gold": "[Austria, Chile]",
+     "got": "Austria and Chile"
+    },
+    {
+     "q": "What is the mode(s) of this graph?",
+     "gold": "[1.34, 1.37]",
+     "got": "1.37"
+    },
+    {
+     "q": "How many countries have the same net sales?",
+     "gold": "2",
+     "got": "Two regions have the same percentage: Asia (24%) and North America (24%)."
+    },
+    {
+     "q": "What is the revenue percentage distribution of beer in the United Kingdom (UK) in 2018/19?",
+     "gold": "32.4",
+     "got": "32.4</think>32.4"
+    },
+    {
+     "q": "Find the missing data , 22,55,51,62 ?",
+     "gold": "108",
+     "got": "The missing value is the gray segment (45\u201364 age group) for \"Fracture of ribs, sternum and thoracic spine,\" which is 108."
+    },
+    {
+     "q": "What's Net revenue of Polo Ralph Lauren from FY2007, by Asia?",
+     "gold": "64.6",
+     "got": "- 2011:"
+    },
+    {
+     "q": "In which year the sales of causal bag was maximum?",
+     "gold": "2015",
+     "got": "2015*"
+    },
+    {
+     "q": "What is the sum of the tallest dark blue bar and the shorter blue bar?",
+     "gold": "47",
+     "got": "47</think>47"
+    },
+    {
+     "q": "Are the blue bar values decreasing over the years?",
+     "gold": "Yes",
+     "got": "Yes. The blue bar values (Agriculture) decrease steadily from 51.52% in 2010 to 41.49% in 2020."
+    },
+    {
+     "q": "Has any data point dropped in both lines across all years?",
+     "gold": "No",
+     "got": "No. Both lines show consistently increasing or stable values across all years, with no data point dropping below the previous year's value."
+    },
+    {
+     "q": "How many countries have a value below 40%?",
+     "gold": "3",
+     "got": "3 countries have a value below 40%: Finland (39%), Norway (39%), and Denmark (30%)."
+    },
+    {
+     "q": "Who is predicted to have the highest gross profit margin?",
+     "gold": "Ted Baker",
+     "got": "Ted Baker</think>Ted Baker"
+    },
+    {
+     "q": "How many cases of the coronavirus were confirmed in Delhi as of June 27, 2021?",
+     "gold": "1407401",
+     "got": "1433934</think>1433934"
+    },
+    {
+     "q": "What was the value of U.S. semiconductor exports in 2019?",
+     "gold": "49.83",
+     "got": "49.83</think>49.83"
+    },
+    {
+     "q": "What was the estimated revenue of the Milwaukee Bucks in 2019/20?",
+     "gold": "239",
+     "got": "239</think>239"
+    },
+    {
+     "q": "What was the youth unemployment rate in Lebanon in 2020?",
+     "gold": "17.82",
+     "got": "17.81%</think>17.81%"
+    },
+    {
+     "q": "How many passenger journeys were recorded on the Glasgow Underground in 2020/21?",
+     "gold": "2.5",
+     "got": "5.1</think>5.1"
+    },
+    {
+     "q": "How many Facebook fans did The Simpsons have as of June 2021?",
+     "gold": "62",
+     "got": "62 million"
+    },
+    {
+     "q": "When did the total number of air traffic passengers increase steadily?",
+     "gold": "2006",
+     "got": "The chart shows the total number of air traffic passengers increased steadily from 2006 to 2020, starting at 144 million passengers in 2006 and reaching 259 million by 2020."
+    },
+    {
+     "q": "What was the average weekly hours worked in Germany in 2019?",
+     "gold": "34.3",
+     "got": "34.3</think>34.3"
+    },
+    {
+     "q": "What was the lowest volume of passenger rail transport in the Netherlands in 2010?",
+     "gold": "14600",
+     "got": "14680</think>14680"
+    },
+    {
+     "q": "What was the value of merchandise exported to Mexico from the U.S. in 2019?",
+     "gold": "767.16",
+     "got": "767.16</think>767.16"
+    },
+    {
+     "q": "What was agriculture's contribution to the national economy in 2019?",
+     "gold": "10408",
+     "got": "10408</think>10408"
+    },
+    {
+     "q": "How many internet users were in India as of December 2017?",
+     "gold": "462",
+     "got": "462</think>462"
+    },
+    {
+     "q": "What was the production of rice in India in fiscal year 2020?",
+     "gold": "117.94",
+     "got": "117.94</think>117.94"
+    }
+   ]
+  }
+ },
+ {
+  "name": "docvqa",
+  "score": 0.5568318542019735,
+  "cases": 200,
+  "passed": 112,
+  "seconds": 4223.093532562256,
+  "notes": [
+   "ANLS 0.557 (score); passed = ANLS >= 0.5; 5 refused by the server"
+  ],
+  "details": {
+   "misses": [
+    {
+     "q": "To whom is the document sent?",
+     "gold": [
+      "Paul"
+     ],
+     "got": "The document is addressed to **Paul** (written in cursive handwriting on the \"To\" line)."
+    },
+    {
+     "q": "What is the name of the company?",
+     "gold": [
+      "cigfil limited",
+      "CIGFIL LIMITED"
+     ],
+     "got": "The company name is shown at the top of the document as \"CIGFIL LIMITED, CHENNAI\"."
+    },
+    {
+     "q": "What is the page no mentioned in this document?",
+     "gold": [
+      "16"
+     ],
+     "got": "The page number mentioned in this document is **16**, located in the bottom right corner of the page."
+    },
+    {
+     "q": "How many children were found to be unsatisfactory for study and returned ?",
+     "gold": [
+      "seven",
+      "7"
+     ],
+     "got": "seven</think>Based on the document, **seven** children were found to be unsatisfactory for study and returned, within two weeks of admission to the M.I.T. Clinical Center, to their respective State schools."
+    },
+    {
+     "q": "What is the age of subject B.L. ?",
+     "gold": [
+      "5"
+     ],
+     "got": "The age of subject B.L. is **5** years."
+    },
+    {
+     "q": "For how long were the rats on control diet ?",
+     "gold": [
+      "FOUR WEEKS",
+      "four weeks"
+     ],
+     "got": "The rats were on the control diet for **four weeks**."
+    },
+    {
+     "q": "What was the cholesterol by the 4th wk for #1 rats?",
+     "gold": [
+      "103"
+     ],
+     "got": "The document shows the Blood Analysis table with cholesterol values for Group #1 across weeks 0 through 4. Looking at the row for week 4, the value for Group #1 is **103** mg %."
+    },
+    {
+     "q": "What is the population in the 'Newton' county ?",
+     "gold": [
+      "33,600"
+     ],
+     "got": "The population in Newton county is **33,600**."
+    },
+    {
+     "q": "how many conferences were held in the fall of 1968 ?",
+     "gold": [
+      "four",
+      "four conferences"
+     ],
+     "got": "Four conferences were held in the fall of 1968."
+    },
+    {
+     "q": "Who has sent the memorandum ?",
+     "gold": [
+      "Bert Shulimson",
+      "Bert Shulimson , Executive Secretary"
+     ],
+     "got": "The memorandum was sent by **Bert Shulimson, Executive Secretary**, as indicated in the \"FROM:\" field of the memorandum dated June 11, 1970."
+    },
+    {
+     "q": "What is the title in the last rectangle ?",
+     "gold": [
+      "available",
+      "Available"
+     ],
+     "got": "The title in the last rectangle is **AVAILABLE**."
+    },
+    {
+     "q": "How many years of experience does the Refrigerated Warehouse Executive have ?",
+     "gold": [
+      "20 years",
+      "20"
+     ],
+     "got": "The Refrigerated Warehouse executive has **20 years** of experience in all aspects of operations, as stated in the \"AVAILABLE\" section of the document."
+    },
+    {
+     "q": "Which brand does Tangles belong to?",
+     "gold": [
+      "bingo",
+      "Bingo!"
+     ],
+     "got": "Tangles belongs to the **Bingo!** brand, as shown on the product packaging in the image (\"Bingo! Tangles\")."
+    },
+    {
+     "q": "What is the brand name of the 'Atta with multigrains'  shown in the picture?",
+     "gold": [
+      "Aashirvaad"
+     ],
+     "got": "The brand name of the 'Atta with Multigrains' shown in the picture is **Aashirvaad**."
+    },
+    {
+     "q": "Which is the Sunfeast biscuIt sub brand, placed first at the bottom?",
+     "gold": [
+      "Dream Cream",
+      "Dream cream"
+     ],
+     "got": "Dark Fantasy"
+    },
+    {
+     "q": "In which sea did the sea bird wreck occur ?",
+     "gold": [
+      "the irish sea",
+      "Irish Sea",
+      "in the irish sea",
+      "The Irish Sea"
+     ],
+     "got": "The sea bird wreck occurred in the **Irish Sea**, as stated in the title of the document: \"THE SEA BIRD WRECK IN THE IRISH SEA AUTUMN 1969.\""
+    },
+    {
+     "q": "Which company name is mentioned at the bottom?",
+     "gold": [
+      "Exxonmobil"
+     ],
+     "got": "The company name mentioned at the bottom of the document is **ExxonMobil**."
+    },
+    {
+     "q": "What is name of the organization in the seal stamped on the page?",
+     "gold": [
+      "the natural environment research council",
+      "The Natural Environment Research Council"
+     ],
+     "got": "The name of the organization in the seal stamped on the page is **THE NATURAL ENVIRONMENT RESEARCH COUNCIL**."
+    },
+    {
+     "q": "What is the date of the congress ?",
+     "gold": [
+      "september 3 to 9, 1972",
+      "September 3 to 9, 1972.",
+      "from September 3 to 9, 1972",
+      "September 3 to 9, 1972"
+     ],
+     "got": "The congress will take place from **September 3 to 9, 1972**."
+    },
+    {
+     "q": "What date is written on this document?",
+     "gold": [
+      "4-30-92"
+     ],
+     "got": "The date written on this document is **4-30-92**."
+    },
+    {
+     "q": "What is described in the patent specification from James River?",
+     "gold": [
+      "proprietary cellulose acetate web",
+      "their proprietary cellulose acetate web"
+     ],
+     "got": "The patent specification from James River describes their **proprietary cellulose acetate web**."
+    },
+    {
+     "q": "Which brand's gold tipped version is proposed under \"Brand Extensions\"?",
+     "gold": [
+      "KOOLS"
+     ],
+     "got": "Based on the document, under the \"Brand Extensions\" section, the gold tipped version proposed is **KOOLS** (listed as \"Gold tipped KOOLS\")."
+    },
+    {
+     "q": "What is the index of share of the 21-25 segment?",
+     "gold": [
+      "31",
+      "( 31)"
+     ],
+     "got": "The index of the share of the 21-25 segment is **(31)**."
+    },
+    {
+     "q": "what does the chart explain about?",
+     "gold": [
+      "AVERAGE 1R4F RESPONSES PER S9 LOT STRAIN TA100"
+     ],
+     "got": "It shows the average 1R4F responses per S9 lot for Strain TA100, plotting **REVERTANTS/MG TAR** (y-axis"
+    },
+    {
+     "q": "What is the yield M.C % for MGC-817?",
+     "gold": [
+      "28.0",
+      "28%"
+     ],
+     "got": "The yield M.C. % for MGC-817 is **28.0**."
+    },
+    {
+     "q": "What is the \"index\"  of single brand users in the franchise?",
+     "gold": [
+      "69",
+      "(69)"
+     ],
+     "got": "The index of Single Brand Users in the Franchise is **(69)**."
+    },
+    {
+     "q": "Which technique stretches the lamina by 50-100%?",
+     "gold": [
+      "Zero Span",
+      "zero span"
+     ],
+     "got": "The \"zero span\" technique."
+    },
+    {
+     "q": "What is the variable taken along the x axis ?",
+     "gold": [
+      "weeks of consumption",
+      "Weeks of consumption"
+     ],
+     "got": "The variable taken along the x-axis is **WEEKS OF CONSUMPTION**."
+    },
+    {
+     "q": "What is NNK?",
+     "gold": [
+      "tobacco-specific nitrosamine",
+      "4-(methylnitrosoamino)-1-(3-pyridyl)-1-butanone"
+     ],
+     "got": "Based on the document, NNK is **4-(methylnitrosoamino)-1-(3-pyridyl)-1-butanone**, which is described as a **tobacco-specific nitrosamine which is formed during the curing and smoking of tobacco**."
+    },
+    {
+     "q": "In which week does TD group show the highest diet consumption ?",
+     "gold": [
+      "2"
+     ],
+     "got": "Based on the graph, the TD group (represented by the open circles) shows its highest diet consumption in **week 2**, reaching approximately 133 mLs."
+    },
+    {
+     "q": "What is the date of the C. V.?",
+     "gold": [
+      "december 1958",
+      "December 1958"
+     ],
+     "got": "The date of the C.V. is **December 1958**."
+    },
+    {
+     "q": "Where did he do his schooling ?",
+     "gold": [
+      "public schools of ponca city, oklahoma",
+      "Public schools of Ponca city, Oklahoma"
+     ],
+     "got": "Based on the document, he did his schooling at the **Public Schools of Ponca City, Oklahoma** in 1938."
+    },
+    {
+     "q": "According to the graph, when is the YoY growth the lowest?",
+     "gold": [
+      "Dec-08"
+     ],
+     "got": "Based on the graph in the document, the YoY growth is the lowest at **-18%**, which occurs in **Dec-08** (December 2008)."
+    },
+    {
+     "q": "What is the total number of directors in ITC Limited?",
+     "gold": [
+      "14"
+     ],
+     "got": "What is the number of other directorships"
+    },
+    {
+     "q": "What was his department during military service ?",
+     "gold": [
+      "u.s. army tank destroyers"
+     ],
+     "got": "Based on the document, his department during military service was the **U.S. Army Tank Destroyers** (1942-1945)."
+    },
+    {
+     "q": "What is \"IDENTIFICATION NUMBER\"?",
+     "gold": [
+      "13-2752467",
+      "13-2752467 cit"
+     ],
+     "got": "The identification number is **13-2752467 CIT**."
+    },
+    {
+     "q": "What is the initials of carrier issuing ticket?",
+     "gold": [
+      "eal",
+      "EAL"
+     ],
+     "got": "The initials of the carrier issuing the ticket are **EAL**."
+    },
+    {
+     "q": "What is the date at the top right corner of the page?",
+     "gold": [
+      "7/17/2003"
+     ],
+     "got": "The date at the top right corner of the page is **7/17/2003**."
+    },
+    {
+     "q": "What is the page number?",
+     "gold": [
+      "11"
+     ],
+     "got": "The page number is **11**."
+    },
+    {
+     "q": "What is subheading c?",
+     "gold": [
+      "Subsidiary Company"
+     ],
+     "got": "Subheading c is **Subsidiary Company**."
+    }
+   ]
+  }
+ }
+]

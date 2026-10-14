@@ -1,0 +1,9 @@
+ruler: http://127.0.0.1:8888, max_tokens 256, 1 runs, median per stream / aggregate tok/s, ttft median
+  c=1   prose         38.9 /    40.4 tok/s (wall   38.9)   ttft 0.22s   253 tokens a reply
+  c=1   code          65.6 /    66.5 tok/s (wall   62.4)   ttft 0.24s   256 tokens a reply
+  c=1   structured    52.6 /    53.2 tok/s (wall   48.4)   ttft 0.28s   162 tokens a reply
+  c=1   list          49.8 /    53.2 tok/s (wall   49.1)   ttft 0.19s   218 tokens a reply
+tokens/round 3.36, drafts/round 5.17, landed 0.46
+info: glm trace: 256 verifies, 63.28 ms each, 6.54 rows (1.00 streams); 260 drafts, 4.03 ms each, 5.22 drafted a stream
+info: glm trace: 256 verifies, 63.33 ms each, 6.37 rows (1.00 streams); 260 drafts, 4.11 ms each, 5.14 drafted a stream
+info: glm trace: 256 verifies, 61.30 ms each, 6.15 rows (1.00 streams); 260 drafts, 4.07 ms each, 4.89 drafted a stream

@@ -1,0 +1,34 @@
+# tf-cuda-test glm-prof TF_PROF_PROMPT=32768 on the pair, branch head 6bfd5bec (zig-out-dev3), 2026-10-13 23:05 UTC
+# Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold, dense 4 / head 8 / draft head 4; one prompt of 32,768 pseudo-random tokens in 2,048-row chunks
+prompt of 32768 tokens: 162967 ms, 201 tok/s
+prompt of 32768 tokens: eager launches sum 118708 ms (synchronized: proportions only)
+   88481.8 ms  74.5%  glm_exl3_grouped64
+    5384.5 ms   4.5%  glm_mm4_128
+    3959.7 ms   3.3%  (all-gather)
+    2554.3 ms   2.2%  glm_attn_sparse
+    2076.5 ms   1.7%  glm_absorb_q
+    1952.3 ms   1.6%  glm_mm_reduce
+    1713.2 ms   1.4%  glm_exl3_down
+    1513.0 ms   1.3%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011step_kernelILi4ELi16EEEviPKfS2_S2_PK13__nv_bf
+    1377.0 ms   1.2%  glm_hc_post
+    1347.6 ms   1.1%  glm_expand_v
+    1250.3 ms   1.1%  glm_router
+    1210.7 ms   1.0%  glm_hc_part
+    1059.2 ms   0.9%  glm_combine
+    1042.5 ms   0.9%  glm_exl3_rot_in
+     644.4 ms   0.5%  glm_attn_merge
+     564.5 ms   0.5%  glm_hc_finish
+     549.4 ms   0.5%  glm_index_scores
+     525.6 ms   0.4%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011prep_kernelEiPK13__nv_bfloat16iiS2_iS2_S2_PKf
+     487.4 ms   0.4%  glm_exl3_gateup
+     198.2 ms   0.2%  glm_copy_rows
+     181.6 ms   0.2%  glm_mm16_128
+     176.9 ms   0.1%  glm_index_select
+     148.5 ms   0.1%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee010out_kernelEiPK13__nv_bfloat16S2_iS2_fPS0_
+     109.3 ms   0.1%  glm_attn_dense
+      42.5 ms   0.0%  glm_swiglu
+      26.6 ms   0.0%  glm_rmsnorm
+      24.2 ms   0.0%  glm_mm8_16
+      19.3 ms   0.0%  glm_index_tokens
+      14.9 ms   0.0%  glm_residual_add
+      14.1 ms   0.0%  glm_topk

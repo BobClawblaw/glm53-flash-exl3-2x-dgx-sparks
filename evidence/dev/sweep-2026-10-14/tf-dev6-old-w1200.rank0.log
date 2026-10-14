@@ -1,0 +1,825 @@
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-env.so) failed: libnccl-env.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+gx10:173685:173685 [0] NCCL INFO NCCL_SOCKET_IFNAME set to enp1s0f1np1
+gx10:173685:173685 [0] NCCL INFO cudaDriverVersion 13000
+gx10:173685:173685 [0] NCCL INFO NCCL version 2.30.7+cuda13.3
+gx10:173685:173685 [0] NCCL INFO NCCL git version HEAD a5187fa2e
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-net.so) failed: libnccl-net.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so
+gx10:173685:173685 [0] NCCL INFO dlvsym failed on mlx5dv_get_data_direct_sysfs_path - /lib/aarch64-linux-gnu/libmlx5.so: undefined symbol: mlx5dv_get_data_direct_sysfs_path, version MLX5_1.25 version MLX5_1.25
+gx10:173685:173685 [0] NCCL INFO dlvsym failed on mlx5dv_reg_dmabuf_mr - /lib/aarch64-linux-gnu/libmlx5.so: undefined symbol: mlx5dv_reg_dmabuf_mr, version MLX5_1.25 version MLX5_1.25
+gx10:173685:173685 [0] NCCL INFO NCCL_IB_HCA set to rocep1s0f1,roceP2p1s0f1
+gx10:173685:173685 [0] NCCL INFO NET/IB: [1] rocep1s0f1:uverbs1:1/RoCE provider=Mlx5 speed=200000 context=0x75ab8a0 pciPath=/sys/devices/pci0000:00/0000:00:00.0/0000:01:00.0 ar=0 oooRqSize=0
+gx10:173685:173685 [0] NCCL INFO NET/IB: [3] roceP2p1s0f1:uverbs3:1/RoCE provider=Mlx5 speed=200000 context=0x75ecfa0 pciPath=/sys/devices/pci0002:00/0002:00:00.0/0002:01:00.0 ar=0 oooRqSize=0
+gx10:173685:173685 [0] NCCL INFO NET/IB : Made virtual device [0] name=rocep1s0f1 speed=200000 ndevs=1 rail=-1 plane=-1
+gx10:173685:173685 [0] NCCL INFO NET/IB : Made virtual device [1] name=roceP2p1s0f1 speed=200000 ndevs=1 rail=-1 plane=-1
+gx10:173685:173685 [0] NCCL INFO NET/IB : Using [0]rocep1s0f1:1/RoCE [1]roceP2p1s0f1:1/RoCE [RO]; OOB enp1s0f1np1:10.0.0.20<0>
+gx10:173685:173685 [0] NCCL INFO Initialized NET plugin IB
+gx10:173685:173685 [0] NCCL INFO Assigned NET plugin IB to comm
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-rma.so) failed: libnccl-rma.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO RMA/Plugin: Could not find: libnccl-rma.so
+gx10:173685:173685 [0] NCCL INFO RMA/Plugin: Failed to load external plugin libnccl-rma.so, dlHandle: (nil), ncclRma: (nil)
+gx10:173685:173685 [0] NCCL INFO RMA/Plugin: Assigned plugin RMA_IB_PROXY to comm
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-gin.so) failed: libnccl-gin.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO GIN/Plugin: Could not find: libnccl-gin.so
+gx10:173685:173685 [0] NCCL INFO GIN/Plugin: Failed to load external plugin libnccl-gin.so, dlHandle: (nil), ncclGin: (nil)
+gx10:173685:173685 [0] NCCL INFO GIN/Plugin: Assigned plugin GIN_IB_GDAKI type 3 to comm
+gx10:173685:173685 [0] NCCL INFO Using network IB
+gx10:173685:173685 [0] NCCL INFO Loaded NVML from libnvidia-ml.so.1
+gx10:173685:173685 [0] NCCL INFO [Rank 0] ncclCommInitRank comm 0x4ae2930 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId f01000 commId 0x7ed3a1836b8c599 - Init START
+gx10:173685:173685 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+gx10:173685:173685 [0] NCCL INFO NET/GIN_IB_GDAKI : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:173685:173685 [0] NCCL INFO NET/GIN_IB_GDAKI : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:173685:173685 [0] NCCL INFO NET/RMA_IB_PROXY : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:173685:173685 [0] NCCL INFO NET/RMA_IB_PROXY : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:173685:173685 [0] NCCL INFO NET/IB : GPU Direct RDMA Disabled for HCA 0 'rocep1s0f1'
+gx10:173685:173685 [0] NCCL INFO NET/IB : GPU Direct RDMA Disabled for HCA 1 'roceP2p1s0f1'
+gx10:173685:173685 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is empty, ignoring. (GPU affinity =  ; CPU affinity = 0-19).
+gx10:173685:173685 [0] NCCL INFO Rank 0: 2 Net devices
+gx10:173685:173685 [0] NCCL INFO Rank 0: 0 CollNet devices
+gx10:173685:173685 [0] NCCL INFO Local Net device counts across ranks: min 2 max 2
+gx10:173685:173685 [0] NCCL INFO Local CollNet device counts across ranks: min 0 max 0
+gx10:173685:173685 [0] NCCL INFO comm 0x4ae2930 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+gx10:173685:173685 [0] NCCL INFO Channel 00/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 01/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 02/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 03/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 04/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 05/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 06/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 07/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 08/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 09/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 10/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 11/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 12/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 13/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 14/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 15/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 16/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 17/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 18/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 19/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 20/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 21/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 22/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 23/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 24/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 25/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 26/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 27/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 28/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 29/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 30/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 31/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 32/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 33/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 34/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 35/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 36/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 37/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 38/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 39/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 40/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 41/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 42/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 43/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 44/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 45/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 46/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 47/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 48/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 49/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 50/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 51/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 52/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 53/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 54/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 55/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 56/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 57/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 58/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 59/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 60/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 61/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 62/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Channel 63/64 : 0 1
+gx10:173685:173685 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 1/-1/-1->0->-1 [5] 1/-1/-1->0->-1 [6] 1/-1/-1->0->-1 [7] 1/-1/-1->0->-1 [8] 1/-1/-1->0->-1 [9] 1/-1/-1->0->-1 [10] 1/-1/-1->0->-1 [11] 1/-1/-1->0->-1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 1/-1/-1->0->-1 [17] 1/-1/-1->0->-1 [18] 1/-1/-1->0->-1 [19] 1/-1/-1->0->-1 [20] 1/-1/-1->0->-1 [21] 1/-1/-1->0->-1 [22] 1/-1/-1->0->-1 [23] 1/-1/-1->0->-1 [24] 1/-1/-1->0->-1 [25] 1/-1/-1->0->-1 [26] 1/-1/-1->0->-1 [27] 1/-1/-1->0->-1 [28] 1/-1/-1->0->-1 [29] 1/-1/-1->0->-1 [30] 1/-1/-1->0->-1 [31] 1/-1/-1->0->-1 [32] -1/-1/-1->0->1 [33] -1/-1/-1->0->1 [34] -1/-1/-1->0->1 [35] -1/-1/-1->0->1 [36] -1/-1/-1->0->1 [37] -1/-1/-1->0->1 [38] -1/-1/-1->0->1 [39] -1/-1/-1->0->1 [40] -1/-1/-1->0->1 [41] -1/-1/-1->0->1 [42] -1/-1/-1->0->1 [43] -1/-1/-1->0->1 [44] -1/-1/-1->0->1 [45] -1/-1/-1->0->1 [46] -1/-1/-1->0->1 [47] -1/-1/-1->0->1 [48] -1/-1/-1->0->1 [49] -1/-1/-1->0->1 [50] -1/-1/-1->0->1 [51] -1/-1/
+gx10:173685:173685 [0] NCCL INFO P2P Chunksize set to 262144
+gx10:173685:173685 [0] NCCL INFO Tuning P2P operations with maxP2pPeers = 2
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-profiler.so) failed: libnccl-profiler.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+gx10:173685:173685 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+gx10:173685:173893 [0] NCCL INFO [Proxy Service] Device 0 CPU core 8
+gx10:173685:173893 [0] NCCL INFO proxy listening socket at 10.0.0.20<58221>
+gx10:173685:173894 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 8
+gx10:173685:173685 [0] NCCL INFO ncclOsDlopen(libnccl-tuner.so) failed: libnccl-tuner.so: cannot open shared object file: No such file or directory
+gx10:173685:173685 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+gx10:173685:173685 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gx10:173685:173685 [0] NCCL INFO 64 coll channels, 64 collnet channels, 0 nvls channels, 64 p2p channels, 2 p2p channels per peer
+gx10:173685:173685 [0] NCCL INFO Symmetric memory is not supported. cuMemEnable 1, globalGinSupport 0, cuMemGdrSupport 0
+gx10:173685:173685 [0] NCCL INFO CC Off, workFifoBytes 1048576
+gx10:173685:173685 [0] NCCL INFO ncclCommInitRank comm 0x4ae2930 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId f01000 commId 0x7ed3a1836b8c599 - Init COMPLETE
+gx10:173685:173685 [0] NCCL INFO Init timings - ncclCommInitRank: rank 0 nranks 2 total 0.32 (kernels 0.19, alloc 0.04, bootstrap 0.05, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.02, rest 0.00)
+gx10:173685:173685 [0] NCCL INFO Symmetric VA size=124GB
+gx10:173685:173939 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 15
+gx10:173685:173685 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 04/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 05/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 06/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 07/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 08/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 09/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 10/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 11/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 12/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 13/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 14/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 15/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 16/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 17/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 18/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 19/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 20/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 21/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 22/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 23/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 24/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 25/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 26/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 27/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 28/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 29/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 30/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 31/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 32/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 33/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 34/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 35/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 36/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 37/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 38/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 39/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 40/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 41/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 42/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 43/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 44/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 45/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 46/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 47/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 48/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 49/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 50/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 51/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 52/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 53/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 54/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 55/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 56/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 57/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 58/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 59/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 60/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 61/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 62/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 63/0 : 1[0] -> 0[0] [receive] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 04/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 05/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 08/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 09/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 10/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 14/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 16/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 17/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 20/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 21/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 22/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 23/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 24/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 25/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 26/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 27/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 28/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 29/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 30/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 31/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 32/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 33/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 34/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 35/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 36/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 37/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 38/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 39/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 40/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 41/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 42/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 43/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 44/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 45/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 46/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 47/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 48/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 49/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 50/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 51/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 52/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 53/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 54/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 55/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 56/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 57/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 58/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 59/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 60/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 61/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173685 [0] NCCL INFO Channel 62/0 : 0[0] -> 1[0] [send] via NET/IB/0
+gx10:173685:173685 [0] NCCL INFO Channel 63/0 : 0[0] -> 1[0] [send] via NET/IB/1
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414041000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414085000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14140cd000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7968 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7968 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bc5c1 ctsFifoLkey=0x1bc5c1
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7968 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141414d000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414195000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14141d9000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414221000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414265000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14142ad000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14142f1000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414339000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141437d000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14143c5000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414409000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414451000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414495000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14144dd000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414521000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414569000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7969 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7970 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414600000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7968 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7982 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7982 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d817f ctsFifoLkey=0x1d817f
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7982 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7983 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7984 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7971 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7971 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ac6c4 ctsFifoLkey=0x1ac6c4
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7971 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7972 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7973 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141474f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7982 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414793000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14147d8000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414819000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414861000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14148a5000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14148ed000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414931000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414979000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14149bd000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414a05000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414a49000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414a91000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414ad5000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414b1d000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414b61000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414ba9000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7971 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7985 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7985 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d726f ctsFifoLkey=0x1d726f
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7985 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7986 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7987 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7974 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7974 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bb3b1 ctsFifoLkey=0x1bb3b1
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7974 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7988 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7988 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cbebc ctsFifoLkey=0x1cbebc
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7988 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7975 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7975 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b2624 ctsFifoLkey=0x1b2624
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7975 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414d02000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7985 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7976 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7977 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7989 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7990 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414de5000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7974 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7988 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7975 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7978 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7979 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7991 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7991 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cc6c5 ctsFifoLkey=0x1cc6c5
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7991 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7980 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7980 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1abab9 ctsFifoLkey=0x1abab9
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7980 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414ed1000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414f19000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414f5a000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1414fa2000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1414fe6000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141502e000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415072000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14150ba000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7992 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7993 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141514c000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7991 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7980 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7981 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7982 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7994 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7994 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cabaa ctsFifoLkey=0x1cabaa
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7994 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7995 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7996 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415261000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7983 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7983 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1adbd8 ctsFifoLkey=0x1adbd8
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7983 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7997 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7997 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x182425 ctsFifoLkey=0x182425
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7997 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7984 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7984 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1baeac ctsFifoLkey=0x1baeac
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7984 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7998 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 7998 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1ce9df ctsFifoLkey=0x1ce9df
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 7998 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415367000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7994 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7983 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7985 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7986 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7997 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=7999 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8000 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7984 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7987 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7988 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 7998 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8001 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8002 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7989 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7989 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bb6b6 ctsFifoLkey=0x1bb6b6
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7989 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7990 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7991 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141555f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14155a3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14155e8000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415629000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141566e000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14156af000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14156f7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141573b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415783000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14157c7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141580f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415853000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141589b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14158df000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415927000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141596b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14159b3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14159f7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415a3f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415a83000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415acb000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415b0f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415b57000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415b9b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415be3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415c27000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415c6c000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415cb0000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415cf8000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415d3c000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415d84000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415dc8000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415e10000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415e54000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415e9c000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415ee0000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415f28000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415f6c000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1415fb4000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1415ff8000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416040000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416084000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7989 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8003 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8003 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1da097 ctsFifoLkey=0x1da097
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8003 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7992 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7992 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a8582 ctsFifoLkey=0x1a8582
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7992 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8004 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8004 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d423f ctsFifoLkey=0x1d423f
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8004 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416160000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8005 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8006 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14161f7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141623f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416283000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14162cb000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8003 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7992 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7993 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7994 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8004 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8007 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8008 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7995 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7995 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b6d6c ctsFifoLkey=0x1b6d6c
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7995 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7996 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7997 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416429000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416471000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14164b2000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14164f7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141653b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416583000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14165c7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141660f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416653000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141669b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14166df000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416727000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141676b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14167b3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee14167f7000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee141683f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416883000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14168cb000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141690f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416957000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee141699b000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee14169e3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416a27000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416a6f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416ab3000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416afb000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416b3f000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416b87000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416bcb000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the send communicator (comm=0xee1416c10000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbResiliencyInit: Resiliency is disabled on the recv communicator (comm=0xee1416c54000)
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbRecvCommInit: Receive work requests will be posted on-demand
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7995 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8009 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8009 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d9c92 ctsFifoLkey=0x1d9c92
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8009 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7998 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 7998 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a4841 ctsFifoLkey=0x1a4841
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 7998 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8010 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8010 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d1206 ctsFifoLkey=0x1d1206
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8010 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8011 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8012 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8009 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 7998 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=7999 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8000 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8010 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8013 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8014 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8001 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8002 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8015 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8015 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d5956 ctsFifoLkey=0x1d5956
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8015 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8003 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8003 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a918e ctsFifoLkey=0x1a918e
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8003 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8016 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8016 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cddd7 ctsFifoLkey=0x1cddd7
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8016 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8004 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8004 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a6160 ctsFifoLkey=0x1a6160
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8004 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8017 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8017 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cd5d3 ctsFifoLkey=0x1cd5d3
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8017 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8005 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8005 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1acfce ctsFifoLkey=0x1acfce
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8005 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8018 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8018 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1da8a6 ctsFifoLkey=0x1da8a6
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8018 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8006 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8006 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ab4ad ctsFifoLkey=0x1ab4ad
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8006 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8019 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8019 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d2c2a ctsFifoLkey=0x1d2c2a
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8019 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8007 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8007 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bdad8 ctsFifoLkey=0x1bdad8
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8007 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8015 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8020 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8021 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8003 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8008 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8009 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8016 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8022 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8023 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8004 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8010 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8011 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8017 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8024 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8025 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8005 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8012 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8013 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8018 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8026 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8027 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8006 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8014 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8015 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8019 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8028 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8029 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8016 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8016 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b8a87 ctsFifoLkey=0x1b8a87
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8016 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8017 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8018 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8007 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8016 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8030 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8031 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8019 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8019 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b6662 ctsFifoLkey=0x1b6662
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8019 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8032 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8032 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d8e89 ctsFifoLkey=0x1d8e89
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8032 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8020 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8020 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b7774 ctsFifoLkey=0x1b7774
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8020 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8033 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8033 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d6766 ctsFifoLkey=0x1d6766
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8033 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8021 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8021 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ba5a2 ctsFifoLkey=0x1ba5a2
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8021 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8034 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8034 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1ca9a7 ctsFifoLkey=0x1ca9a7
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8034 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8022 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8022 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b9491 ctsFifoLkey=0x1b9491
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8022 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8035 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8035 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1db2b0 ctsFifoLkey=0x1db2b0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8035 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8023 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8023 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1acac7 ctsFifoLkey=0x1acac7
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8023 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8036 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8036 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1cb4b2 ctsFifoLkey=0x1cb4b2
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8036 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8019 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8024 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8025 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8032 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8037 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8038 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8020 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8026 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8027 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8033 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8039 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8040 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8021 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8028 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8029 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8034 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8041 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8042 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8022 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8030 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8031 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8035 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8043 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8044 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8023 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8032 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8033 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8045 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8045 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1b2525 ctsFifoLkey=0x1b2525
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8045 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8046 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8047 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8036 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8045 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8034 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8034 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1bdfdd ctsFifoLkey=0x1bdfdd
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8034 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8048 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8048 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1dbfb4 ctsFifoLkey=0x1dbfb4
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8048 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8035 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8035 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ac7c5 ctsFifoLkey=0x1ac7c5
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8035 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8049 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8049 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d2623 ctsFifoLkey=0x1d2623
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8049 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8036 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8036 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ba39c ctsFifoLkey=0x1ba39c
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8036 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8050 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8050 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d4746 ctsFifoLkey=0x1d4746
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8050 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8037 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8037 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b5b57 ctsFifoLkey=0x1b5b57
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8037 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8051 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8051 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d7d74 ctsFifoLkey=0x1d7d74
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8051 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8038 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8038 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a5855 ctsFifoLkey=0x1a5855
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8038 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8052 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8052 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d8b85 ctsFifoLkey=0x1d8b85
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8052 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8039 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8039 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b3c3a ctsFifoLkey=0x1b3c3a
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8039 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8053 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8053 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d5a57 ctsFifoLkey=0x1d5a57
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8053 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8040 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8040 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1af0ee ctsFifoLkey=0x1af0ee
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8040 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8054 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8054 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d5e5c ctsFifoLkey=0x1d5e5c
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8054 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8041 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8041 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1b514e ctsFifoLkey=0x1b514e
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8041 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8055 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8055 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1d0f10 ctsFifoLkey=0x1d0f10
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8055 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8042 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8042 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1ae6e3 ctsFifoLkey=0x1ae6e3
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8042 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8056 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8056 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1da39f ctsFifoLkey=0x1da39f
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8056 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8043 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 0 IbDev 0 Port 1 qp_num 8043 mtu 5 GID 3 (0/1400000AFFFF0000) ctsFifoRkey=0x1a6c6a ctsFifoLkey=0x1a6c6a
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 0 Port 1 qp_num 8043 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsCreate: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8057 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: NCCL Dev 1 IbDev 1 Port 1 qp_num 8057 mtu 5 GID 3 (0/1401000AFFFF0000) ctsFifoRkey=0x1db1ac ctsFifoLkey=0x1db1ac
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbConnectImpl: IbDev 1 Port 1 qp_num 8057 query_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8034 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8048 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8058 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8059 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8035 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8044 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8045 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8049 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8060 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8061 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8036 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8046 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8047 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8050 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8062 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8063 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8037 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8048 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8049 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8051 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8064 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8065 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8038 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8050 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8051 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8052 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8066 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8067 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8039 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8052 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8053 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8053 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8068 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8069 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8040 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8054 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8055 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8054 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8070 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8071 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8041 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8056 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8057 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8055 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8072 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8073 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8042 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8058 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8059 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 1 Port 1 qp_num 8056 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8074 pkey=0 pd=0xee1414081010 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=1 devName=roceP2p1s0f1 ndevs=2 nmdevs=2 qp_num=8075 pkey=0 pd=0xee1414081010
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenderQpsToRts: Set ECE: IbDev 0 Port 1 qp_num 8043 set_ece={supported=1, vendor_id=0x15b3, options=0x30000002, comp_mask=0x0}
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8060 pkey=0 pd=0xee1414040f60 oooRq=0
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbReceiverQpsCreateToRts: Flush QP created: port=1 dev=0 devName=rocep1s0f1 ndevs=2 nmdevs=2 qp_num=8061 pkey=0 pd=0xee1414040f60
+gx10:173685:173893 [0] NCCL INFO NET/IB: ncclIbSenrank 0: teacher-forced on 1373 prompt tokens: the top token equals Python's next token at 114 of 114 positions

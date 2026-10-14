@@ -1,0 +1,86 @@
+[
+ {
+  "prompt": "Explain, in about 150 words, why the sky is blue and sunsets are red.",
+  "sha": "5cbfe6240454",
+  "tokens": 186,
+  "tok_s": 44.77008482881508,
+  "text": "The sky is blue because of a phenomenon called Rayleigh scattering. Sunlight contains all colors of the visible spectrum, and when it enters Earth's atmosphere, it collides with gas molecules like nitrogen and oxygen. These molecules scatter shorter wavelengths (blue and violet) much more strongly than longer wavelengths (red and orange)\u2014roughly by a factor of the wavelength raised to the fourth power. Although violet light scatters even more than blue, our eyes are more sensitive to blue, and some violet is absorbed higher in the atmosphere, so the sky appears blue.\n\nAt sunset, sunlight travels through a much thicker slice of atmosphere to reach our eyes. Along this long path, most of the blue and green light gets scattered away in other directions before it arrives. The longer wavelengths\u2014reds and oranges\u2014pass through more easily, so the sun and nearby sky glow in warm colors. Dust and aerosols can enhance these vivid sunset hues."
+ },
+ {
+  "prompt": "Write a Python function that parses an ISO-8601 date string and returns the day of the week, with a docstring and two examples.",
+  "sha": "e82e54f1dcbf",
+  "tokens": 300,
+  "tok_s": 71.03408145870267,
+  "text": "Here's a Python function that parses an ISO-8601 date string and returns the day of the week:\n\n```python\nfrom datetime import datetime\n\ndef get_day_of_week(iso_date: str) -> str:\n    \"\"\"\n    Parse an ISO-8601 date string and return the day of the week.\n\n    Args:\n        iso_date: A date string in ISO-8601 format (e.g., \"2024-03-15\").\n\n    Returns:\n        The full name of the day of the week (e.g., \"Friday\").\n\n    Raises:\n        ValueError: If the input string is not a valid ISO-8601 date.\n\n    Examples:\n        >>> get_day_of_week(\"2024-03-15\")\n        'Friday'\n        >>> get_day_of_week(\"2000-01-01\")\n        'Saturday'\n    \"\"\"\n    date_obj = datetime.fromisoformat(iso_date)\n    return date_obj.strftime(\"%A\")\n```\n\n**How it works:**\n\n- `datetime.fromisoformat()` parses the ISO-8601 string into a `datetime` object. It handles dates like `\"2024-03-15\"` and also datetimes like `\"2024-03-15T10:30:00\"`.\n- `strftime(\"%A\")` formats the date as the full weekday name.\n\n**Example usage:**\n\n```python\nprint(get_day_of_week(\"2024-03-15\"))   # Friday\nprint"
+ },
+ {
+  "prompt": "List five differences between TCP and UDP as a numbered list, one sentence each.",
+  "sha": "d2db64f5d339",
+  "tokens": 145,
+  "tok_s": 50.24767900555842,
+  "text": "1. TCP is connection-oriented, requiring a handshake before data transfer, while UDP is connectionless and sends data without establishing a connection.\n2. TCP guarantees reliable, ordered delivery of data, whereas UDP provides no guarantee of delivery, ordering, or duplicate protection.\n3. TCP performs error checking with acknowledgments and retransmissions, while UDP only offers a basic checksum for error detection without recovery mechanisms.\n4. TCP has higher overhead due to headers and connection management, making it slower, while UDP is lightweight and faster with minimal overhead.\n5. TCP is suited for applications requiring accuracy like web browsing, email, and file transfers, while UDP is preferred for real-time applications like video streaming, gaming, and VoIP."
+ },
+ {
+  "prompt": "Translate to French: 'The committee postponed the vote until the engineers had finished their report.'",
+  "sha": "cc1fdf4dff59",
+  "tokens": 219,
+  "tok_s": 55.752049552727385,
+  "text": "Voici la traduction en fran\u00e7ais :\n\n**\u00ab Le comit\u00e9 a report\u00e9 le vote jusqu'\u00e0 ce que les ing\u00e9nieurs aient termin\u00e9 leur rapport. \u00bb**\n\nQuelques remarques sur la traduction :\n\n- **\u00ab a report\u00e9 \u00bb** : le pass\u00e9 compos\u00e9 est utilis\u00e9 pour exprimer l'action pass\u00e9e de \"postponed\". On pourrait aussi dire \u00ab a diff\u00e9r\u00e9 \u00bb ou \u00ab a ajourn\u00e9 \u00bb (ce dernier \u00e9tant plus formel, souvent utilis\u00e9 dans les contextes parlementaires).\n- **\u00ab jusqu'\u00e0 ce que \u00bb** : cette conjonction introduit le subjonctif, d'o\u00f9 **\u00ab aient termin\u00e9 \u00bb** (subjonctif pass\u00e9), qui correspond bien au plus-que-parfait anglais \"had finished\".\n- **\u00ab leur rapport \u00bb** : le possessif s'accorde avec le pluriel des ing\u00e9nieurs.\n\nUne variante plus formelle serait : \u00ab Le comit\u00e9 a ajourn\u00e9 le vote jusqu'\u00e0 ce que les ing\u00e9nieurs aient achev\u00e9 leur rapport. \u00bb"
+ },
+ {
+  "prompt": "Write a bash script that renames every .jpeg file in a directory tree to .jpg, skipping files whose target name exists, and prints a summary.",
+  "sha": "da77a4beed92",
+  "tokens": 300,
+  "tok_s": 61.547839219871655,
+  "text": "# Rename .jpeg to .jpg Script\n\nHere's a bash script that safely renames all `.jpeg` files to `.jpg` in a directory tree:\n\n```bash\n#!/usr/bin/env bash\n#\n# jpeg2jpg.sh - Rename all .jpeg files to .jpg in a directory tree.\n# Skips renames where the target .jpg file already exists.\n\nset -euo pipefail\n\n# --- Configuration ---\nSEARCH_DIR=\"${1:-.}\"   # Default to current directory if no argument given\n\n# --- Counters ---\nrenamed=0\nskipped=0\nerrors=0\n\n# --- Validate input directory ---\nif [[ ! -d \"$SEARCH_DIR\" ]]; then\n    echo \"Error: '$SEARCH_DIR' is not a directory.\" >&2\n    exit 1\nfi\n\necho \"Scanning '$SEARCH_DIR' for .jpeg files...\"\necho \"---\"\n\n# --- Find and rename files ---\nwhile IFS= read -r -d '' file; do\n    target=\"${file%.jpeg}.jpg\"\n\n    if [[ -e \"$target\" ]]; then\n        echo \"SKIP: '$file' -> '$target' already exists.\"\n        ((skipped++))\n    else\n        if mv -n -- \"$file\" \"$target\"; then\n            echo \"RENAME: '$file' -> '$target'\"\n            ((renamed++))\n        else\n            echo \"ERROR: Failed to rename '$file'.\" >&2\n            ((errors"
+ },
+ {
+  "prompt": "A train leaves at 09:40 and arrives at 14:05 after a 25-minute stop. What is its moving time? Show the steps briefly.",
+  "sha": "a4754fc94219",
+  "tokens": 166,
+  "tok_s": 64.5261397626367,
+  "text": "# Train Journey Problem\n\n## Given Information\n- Departure time: 09:40\n- Arrival time: 14:05\n- Stop duration: 25 minutes\n\n## Step 1: Find Total Journey Time\n\nFrom 09:40 to 14:05:\n\n$$14:05 - 09:40 = 4 \\text{ hours } 25 \\text{ minutes}$$\n\n**Check:** 09:40 + 4 hours = 13:40, then + 25 minutes = 14:05 \u2713\n\n## Step 2: Subtract the Stop Time\n\n$$4 \\text{ h } 25 \\text{ min} - 25 \\text{ min} = 4 \\text{ hours}$$\n\n## Answer\n\n**Moving time = 4 hours**"
+ },
+ {
+  "prompt": "Summarize the plot of a heist film you invent, in exactly four sentences.",
+  "sha": "9135bf39822a",
+  "tokens": 172,
+  "tok_s": 38.30538534189607,
+  "text": "In \"The Velvet Ledger,\" a disgraced museum archivist discovers that a famous painting supposedly destroyed in a 1968 fire actually hangs in the private vault of a ruthless billionaire who has been laundering money through art auctions for decades. She assembles a crew of specialists\u2014a safecracker, a forger, a social engineer, and a getaway driver\u2014each of whom has been personally ruined by the billionaire's financial schemes. Their plan hinges on swapping the painting with a flawless forgery during a high-profile gala, then using the vault's hidden ledger of illicit transactions to expose his empire rather than simply stealing for profit. The heist succeeds, but in the final twist, the archivist reveals she orchestrated everything to recover the ledger all along, sacrificing her cut of the painting's sale to bring the billionaire down and restore her own tarnished name."
+ },
+ {
+  "prompt": "Give a JSON array of three objects, each with keys city, country and population (integer), for three large Asian cities.",
+  "sha": "9a35ed17de5b",
+  "tokens": 94,
+  "tok_s": 66.45205687364773,
+  "text": "```json\n[\n  {\n    \"city\": \"Tokyo\",\n    \"country\": \"Japan\",\n    \"population\": 37400068\n  },\n  {\n    \"city\": \"Delhi\",\n    \"country\": \"India\",\n    \"population\": 28514000\n  },\n  {\n    \"city\": \"Shanghai\",\n    \"country\": \"China\",\n    \"population\": 25582000\n  }\n]\n```"
+ },
+ {
+  "prompt": "Rewrite this sentence in the passive voice and then in the imperative: 'The engineer calibrates the sensor every morning.'",
+  "sha": "29a82066a6b7",
+  "tokens": 142,
+  "tok_s": 50.08366541549778,
+  "text": "# Sentence Transformations\n\n**Original (Active Voice):**\nThe engineer calibrates the sensor every morning.\n\n**Passive Voice:**\nThe sensor is calibrated by the engineer every morning.\n\n**Imperative:**\nCalibrate the sensor every morning.\n\n---\n\n**Notes on each transformation:**\n\n- **Passive voice:** The object (*the sensor*) becomes the subject, and the verb changes to *is calibrated* (be + past participle). The original subject (*the engineer*) follows in a *by* phrase.\n\n- **Imperative:** The subject is dropped entirely, and the base form of the verb is used. This creates a command or instruction directed at an implied \"you.\""
+ },
+ {
+  "prompt": "What is 17 * 23? Then subtract 91 and divide by 5. Show each step.",
+  "sha": "545aef6f0200",
+  "tokens": 113,
+  "tok_s": 66.16897916895475,
+  "text": "# Step-by-Step Solution\n\n## Step 1: Multiply 17 \u00d7 23\n\n$$17 \\times 23$$\n\nBreaking it down:\n- 17 \u00d7 20 = 340\n- 17 \u00d7 3 = 51\n- 340 + 51 = **391**\n\n## Step 2: Subtract 91\n\n$$391 - 91 = 300$$\n\n## Step 3: Divide by 5\n\n$$300 \\div 5 = 60$$\n\n## Final Answer: **60** \u2705"
+ },
+ {
+  "prompt": "Write a haiku about a lighthouse, then explain its syllable count.",
+  "sha": "a54fc77a3763",
+  "tokens": 206,
+  "tok_s": 58.583690759403424,
+  "text": "# Lighthouse Haiku\n\n**Steady beacon burns**\n**Guiding ships through darkest night**\n**Faithful light endures**\n\n## Syllable Count Explanation\n\nA traditional haiku follows the 5-7-5 syllable pattern:\n\n**Line 1: \"Steady beacon burns\" \u2014 5 syllables**\n- Stea-dy (2)\n- bea-con (2)\n- burns (1)\n\n**Line 2: \"Guiding ships through darkest night\" \u2014 7 syllables**\n- Gui-ding (2)\n- ships (1)\n- through (1)\n- dar-kest (2)\n- night (1)\n\n**Line 3: \"Faithful light endures\" \u2014 5 syllables**\n- Faith-ful (2)\n- light (1)\n- en-dures (2)\n\nThe haiku captures the lighthouse's essence: its constancy, its purpose of guiding sailors, and its enduring presence through storms and darkness."
+ },
+ {
+  "prompt": "Name the planets of the solar system in order from the Sun, one per line, and mark the gas giants with an asterisk.",
+  "sha": "c903db274cd2",
+  "tokens": 25,
+  "tok_s": 43.43296406527711,
+  "text": "Mercury\nVenus\nEarth\nMars\nJupiter*\nSaturn*\nUranus*\nNeptune*"
+ }
+]

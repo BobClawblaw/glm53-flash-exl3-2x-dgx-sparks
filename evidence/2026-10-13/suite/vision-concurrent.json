@@ -1,0 +1,38 @@
+{
+ "name": "vision-concurrent",
+ "score": 1.0,
+ "cases": 16,
+ "passed": 16,
+ "seconds": 47.334620237350464,
+ "notes": [
+  "16 image/video requests together vs alone"
+ ],
+ "details": {
+  "alone": {
+   "shapes": "Based on the image, here is a description of the shapes, colours, and text:\n\n**Shapes and Colours:**\n*   **Circle:** On the left side of the image, there is a solid red circle.\n*   **Square:** On the right side of the image, there is a solid blue square.\n\n**Text:**\n*   Below the shapes, the text reads: **\"GLM 42\"** (in bold, black font).",
+   "text": "The text in the image says:\n\n**TensorFold on DGX Spark**",
+   "count": "There are **3** triangles in the image, and they are **green**.",
+   "two images": "The first image is red, and the second image is yellow.",
+   "video motion": "The ball moves from left to right.",
+   "video colours": "The video begins with a blue background. It then transitions to a green background, which remains until the end. Therefore, the background is blue at the start and green at the end."
+  },
+  "together": [
+   "Based on the image, here is a description of the shapes, colours, and text:\n\n**Shapes and Colours:**\n*   **Circle:** On the left side of the image, there is a solid red circle.\n*   **Square:** On the right side of the image, there is a solid blue square.\n\n**Text:**\n*   Below the shapes, the text reads: **\"GLM 42\"** (in bold, black font).",
+   "The text in the image says:\n\n**TensorFold on DGX Spark**",
+   "There are **3** triangles in the image, and they are **green**.",
+   "The first image is red, and the second image is yellow.",
+   "The ball moves from left to right.",
+   "The video begins with a blue background. It then transitions to a green background, which remains until the end. Therefore, the background is blue at the start and green at the end.",
+   "Based on the image, here is a description of the shapes, colours, and text:\n\n**Shapes and Colours:**\n*   **Circle:** On the left side of the image, there is a solid red circle.\n*   **Square:** On the right side of the image, there is a solid blue square.\n\n**Text:**\n*   Below the shapes, the text reads: **\"GLM 42\"** (in bold, black font).",
+   "The text in the image says:\n\n**TensorFold on DGX Spark**",
+   "There are **3** triangles in the image, and they are **green**.",
+   "The first image is red, and the second image is yellow.",
+   "The ball moves from left to right.",
+   "The video begins with a blue background. It then transitions to a green background, which remains until the end. Therefore, the background is blue at the start and green at the end.",
+   "Based on the image, here is a description of the shapes, colours, and text:\n\n**Shapes and Colours:**\n*   **Circle:** On the left side of the image, there is a solid red circle.\n*   **Square:** On the right side of the image, there is a solid blue square.\n\n**Text:**\n*   Below the shapes, the text reads: **\"GLM 42\"** (in bold, black font).",
+   "The text in the image says:\n\n**TensorFold on DGX Spark**",
+   "There are **3** triangles in the image, and they are **green**.",
+   "The first image is red, and the second image is yellow."
+  ]
+ }
+}

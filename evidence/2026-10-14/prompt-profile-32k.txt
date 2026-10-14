@@ -1,0 +1,31 @@
+# tf-cuda-test glm-prof, TF_PROF_PROMPT=32768, the dev build 784b3a33 with TF_GLM_EXL3_PROMPT=fused (the same kernels the published image 09e84096 runs by default), 2026-10-14 10:34 UTC, NCCL on RoCE
+prompt of 32768 tokens: 78244 ms, 419 tok/s
+prompt of 32768 tokens: eager launches sum 33398 ms (synchronized: proportions only)
+    5479.1 ms  16.4%  glm_mm4_128
+    4371.3 ms  13.1%  glm_exl3_prompt_gu
+    3049.5 ms   9.1%  (all-gather)
+    2850.3 ms   8.5%  glm_exl3_prompt_dn
+    2522.8 ms   7.6%  glm_attn_sparse
+    2097.7 ms   6.3%  glm_absorb_q
+    1872.2 ms   5.6%  glm_mm_reduce
+    1531.5 ms   4.6%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011step_kernelILi4ELi16EEEviPKfS2_S2_PK13__nv_bf
+    1370.0 ms   4.1%  glm_hc_post
+    1322.4 ms   4.0%  glm_expand_v
+    1270.7 ms   3.8%  glm_router
+    1228.5 ms   3.7%  glm_hc_part
+    1042.3 ms   3.1%  glm_combine
+     631.2 ms   1.9%  glm_attn_merge
+     555.8 ms   1.7%  glm_hc_finish
+     551.1 ms   1.7%  glm_index_scores
+     538.9 ms   1.6%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011prep_kernelEiPK13__nv_bfloat16iiS2_iS2_S2_PKf
+     197.0 ms   0.6%  glm_copy_rows
+     186.8 ms   0.6%  glm_mm16_128
+     177.0 ms   0.5%  glm_index_select
+     157.3 ms   0.5%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee010out_kernelEiPK13__nv_bfloat16S2_iS2_fPS0_
+     109.1 ms   0.3%  glm_attn_dense
+      85.9 ms   0.3%  glm_exl3_rot_rows
+      42.7 ms   0.1%  glm_swiglu
+      27.4 ms   0.1%  glm_rmsnorm
+      24.0 ms   0.1%  glm_mm8_16
+      18.9 ms   0.1%  glm_index_tokens
+      14.6 ms   0.0%  glm_residual_add

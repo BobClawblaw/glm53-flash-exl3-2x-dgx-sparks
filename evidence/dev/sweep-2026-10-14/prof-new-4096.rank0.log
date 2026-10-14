@@ -1,0 +1,55 @@
+libibverbs: Warning: couldn't load driver 'libipathverbs-rdmav34.so': libipathverbs-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'liberdma-rdmav34.so': liberdma-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libefa-rdmav34.so': libefa-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libirdma-rdmav34.so': libirdma-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libmana-rdmav34.so': libmana-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libmlx4-rdmav34.so': libmlx4-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libmlx5-rdmav34.so': libmlx5-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libsiw-rdmav34.so': libsiw-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libmthca-rdmav34.so': libmthca-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libqedr-rdmav34.so': libqedr-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libvmw_pvrdma-rdmav34.so': libvmw_pvrdma-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libcxgb4-rdmav34.so': libcxgb4-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libocrdma-rdmav34.so': libocrdma-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libhfi1verbs-rdmav34.so': libhfi1verbs-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libbnxt_re-rdmav34.so': libbnxt_re-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'librxe-rdmav34.so': librxe-rdmav34.so: cannot open shared object file: No such file or directory
+libibverbs: Warning: couldn't load driver 'libhns-rdmav34.so': libhns-rdmav34.so: cannot open shared object file: No such file or directory
+info: RoCE all-gather: 2 HCA(s), shards up to 512 KiB by RDMA writes
+prompt of 32768 tokens: 150401 ms, 218 tok/s
+prompt of 32768 tokens: eager launches sum 104683 ms (synchronized: proportions only)
+   51367.7 ms  49.1%  glm_exl3_prompt128
+   27736.5 ms  26.5%  (all-gather)
+    5367.5 ms   5.1%  glm_mm4_128
+    2561.3 ms   2.4%  glm_attn_sparse
+    2083.7 ms   2.0%  glm_absorb_q
+    1884.7 ms   1.8%  glm_mm_reduce
+    1795.1 ms   1.7%  glm_exl3_down
+    1519.6 ms   1.5%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011step_kernelILi4ELi16EEEviPKfS2_S2_PK13__nv_bf
+    1453.3 ms   1.4%  glm_router
+    1391.0 ms   1.3%  glm_hc_post
+    1315.0 ms   1.3%  glm_expand_v
+    1158.3 ms   1.1%  glm_hc_part
+    1073.1 ms   1.0%  glm_combine
+     644.6 ms   0.6%  glm_attn_merge
+     576.1 ms   0.6%  glm_hc_finish
+     562.2 ms   0.5%  glm_index_scores
+     532.1 ms   0.5%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee011prep_kernelEiPK13__nv_bfloat16iiS2_iS2_S2_PKf
+     520.1 ms   0.5%  glm_exl3_gateup
+     198.0 ms   0.2%  glm_copy_rows
+     184.9 ms   0.2%  glm_mm16_128
+     184.6 ms   0.2%  glm_index_select
+     179.1 ms   0.2%  _ZN38_GLOBAL__N__c5c7ab93_6_kda_cu_9c221ee010out_kernelEiPK13__nv_bfloat16S2_iS2_fPS0_
+     117.6 ms   0.1%  glm_attn_dense
+     105.2 ms   0.1%  glm_exl3_rot_rows
+      44.1 ms   0.0%  glm_swiglu
+      28.2 ms   0.0%  glm_rmsnorm
+      21.3 ms   0.0%  glm_index_tokens
+      15.0 ms   0.0%  glm_residual_add
+      12.3 ms   0.0%  glm_mm8_16
+      10.3 ms   0.0%  glm_topk
+NCCL version 2.30.7+cuda13.3
+
+[2026-10-14 06:41:48] gx10:4105103:4105103 [0] init.cc:449 NCCL WARN Spectrum-X (SPCX) NCCL plugin is not supported on device:rocep1s0f1, skipping ..
+
+[2026-10-14 06:41:48] gx10:4105103:4105103 [0] init.cc:449 NCCL WARN Spectrum-X (SPCX) NCCL plugin is not supported on device:roceP2p1s0f1, skipping ..

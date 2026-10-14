@@ -1,0 +1,23 @@
+{
+ "w4000": {
+  "prompt_tokens": 4466,
+  "completion_tokens": 136,
+  "seconds": 21.4,
+  "sha": "895c6b767e26",
+  "reply": "# Answers\n\n**Vault code:** 4471\n\n**Ferry departure:** 17 past the hour\n\n**Summary of the notes:**\n\nThe text is a long, repetitive stream of nature- and object-themed words \u2014 including forest, bramble, compass, velvet, glacier, candle, orbit, walnut, harbor, thunder, and many others \u2014 repeated in varying combinations throughout. Buried within this word stream are two distinct pieces of information: the vault code \"4471\" and the statement that \"the ferry leaves at 17 past the hour.\" The remainder of the content consists of these same vocabulary words cycling through countless permutations without forming additional meaningful statements."
+ },
+ "w16000": {
+  "prompt_tokens": 17701,
+  "completion_tokens": 160,
+  "seconds": 77.0,
+  "sha": "a8bcb090c2d1",
+  "reply": "# Answers\n\n**Vault code:** 4471\n\n**Ferry departure:** 17 past the hour\n\n# Summary of the Notes\n\nThe notes consist of an extremely long stream of repeated words drawn from a small vocabulary of nature- and object-themed terms \u2014 including *forest, bramble, compass, velvet, ledger, glacier, candle, orbit, walnut, engine, saddle, pepper, copper, river, signal, meadow, cinder, ribbon, lantern, garden, timber, harbor, anchor, marble, quarry, thunder, violet, stone, cloud,* and *meadow* \u2014 with no grammatical structure or sentences. The only meaningful information embedded in the text is the vault code (4471) and the ferry departure time (17 past the hour), both of"
+ },
+ "w32000": {
+  "prompt_tokens": 35381,
+  "completion_tokens": 160,
+  "seconds": 151.6,
+  "sha": "bbcf4969a291",
+  "reply": "# Answers\n\n**Vault code:** 4471\n\n**Ferry departure:** 17 past the hour\n\n# Summary of the Notes\n\nThe notes consist of a long stream of words drawn from a small vocabulary of nature and object terms \u2014 including *forest, bramble, compass, velvet, ledger, glacier, candle, orbit, walnut, engine, saddle, pepper, copper, river, signal, meadow, cinder, ribbon, lantern, garden, timber, harbor, anchor, quarry, thunder, violet, marble, stone, cloud, and river* \u2014 repeated in seemingly random order throughout the text. Two meaningful pieces of information are embedded within this word stream: the vault code **4471** and the ferry departure time of **17 past the hour**. The remainder"
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "label": "prefill-new-2048",
+  "started": "2026-10-14 07:30:31",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "prefill": {
+    "2048": {
+      "prompt_tokens": 5941,
+      "ttft_s": 19.178,
+      "prefill_tok_s": 309.8
+    },
+    "8192": {
+      "prompt_tokens": 29867,
+      "ttft_s": 96.825,
+      "prefill_tok_s": 308.5
+    },
+    "32768": {
+      "prompt_tokens": 113911,
+      "ttft_s": 375.671,
+      "prefill_tok_s": 303.2
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 07:39:32"
+}

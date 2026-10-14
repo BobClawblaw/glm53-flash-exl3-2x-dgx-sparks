@@ -1,0 +1,9 @@
+error: warm gather: remote process exited or there was a network error (6)
+FAIL glm-tf: NcclFailed
+NCCL version 2.30.7+cuda13.3
+
+[2026-10-14 05:49:28] gx10:3535360:3535383 [0] misc/socket.cc:59 (socketProgress) NCCL WARN socketProgress: Connection closed by remote peer 10.0.0.30<39902>
+
+[2026-10-14 05:49:28] gx10:3535360:3535383 [0] misc/socket.cc:59 (socketProgress) NCCL WARN socketProgress: Connection closed by remote peer 10.0.0.30<48741>
+
+[2026-10-14 05:49:28] gx10:3535360:3535383 [0] proxy.cc:1862 (ncclProxyService) NCCL WARN [Service thread] Error encountered progressing operation=Connect, res=3, closing connection

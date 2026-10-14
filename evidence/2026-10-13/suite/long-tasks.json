@@ -1,0 +1,78 @@
+{
+ "name": "long-tasks",
+ "score": 0.9,
+ "cases": 40,
+ "passed": 36,
+ "seconds": 2167.624589204788,
+ "notes": [
+  "mk-niah 1/1@25k, multi-value 4/4@25k, var-track 3/5@25k, common-words 10/10@42k, mk-niah 1/1@102k, multi-value 4/4@102k, var-track 3/5@102k, common-words 10/10@165k"
+ ],
+ "details": {
+  "rows": [
+   {
+    "task": "mk-niah",
+    "tokens": 25579,
+    "seconds": 92.77681992998987,
+    "passed": 1,
+    "cases": 1,
+    "reply": "4599098"
+   },
+   {
+    "task": "multi-value",
+    "tokens": 25551,
+    "seconds": 92.88559616499697,
+    "passed": 4,
+    "cases": 4,
+    "reply": "3485900, 7010244, 3846855, 4061577"
+   },
+   {
+    "task": "var-track",
+    "tokens": 25513,
+    "seconds": 93.0172807110066,
+    "passed": 3,
+    "cases": 5,
+    "reply": "XKQ, PLM, SJY, RTV, ZWB, HNC, MUE."
+   },
+   {
+    "task": "common-words",
+    "tokens": 42228,
+    "seconds": 153.67181615899608,
+    "passed": 10,
+    "cases": 10,
+    "reply": "amber, thistle, comet, island, walnut, linen, timber, fiddle, apron, ember"
+   },
+   {
+    "task": "mk-niah",
+    "tokens": 102283,
+    "seconds": 375.12098465900635,
+    "passed": 1,
+    "cases": 1,
+    "reply": "6096235"
+   },
+   {
+    "task": "multi-value",
+    "tokens": 102253,
+    "seconds": 374.936291719001,
+    "passed": 4,
+    "cases": 4,
+    "reply": "5798231, 4016861, 8259577, 2820698"
+   },
+   {
+    "task": "var-track",
+    "tokens": 102226,
+    "seconds": 375.0832574060041,
+    "passed": 3,
+    "cases": 5,
+    "reply": "XKQ, PLM, SJY, RTV, ZWB, HNC, MUE"
+   },
+   {
+    "task": "common-words",
+    "tokens": 165307,
+    "seconds": 610.0967109779886,
+    "passed": 10,
+    "cases": 10,
+    "reply": "pebble, island, granite, quill, linen, sage, dagger, ridge, fennel, cactus"
+   }
+  ]
+ }
+}

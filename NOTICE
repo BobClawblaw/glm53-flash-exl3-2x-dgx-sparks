@@ -1,0 +1,31 @@
+This repository's own files (the spark/ orchestrator, the quality suite, the bench ruler, the tests, the systemd unit
+and the documents) are MIT, see LICENSE.
+
+docker/patches/tensorfold-native-v1.0.7-glm.patch is a change set to TensorFold (https://github.com/ashhart/TensorFold,
+Apache License 2.0, copyright the TensorFold contributors) and is distributed under the Apache License 2.0 like the
+code it modifies (LICENSES/Apache-2.0.txt). The image build applies it on top of TensorFold at the pinned release.
+Within it:
+- the EXL3 expert kernels read ExLlamaV3's trellis format (https://github.com/turboderp-org/exllamav3, MIT,
+  Copyright (c) 2025 Turboderp) and follow TensorFold's Python engine's EXL3 kernel (Apache License 2.0);
+- the RoCE all-gather follows b12x's "RoCEnante" exchange (https://github.com/local-inference-lab/b12x, Apache
+  License 2.0);
+- the DFlash2 drafter follows z-lab's DFlash reference (https://github.com/z-lab/dflash, MIT, Copyright 2026 Z Lab);
+- files vendored upstream keep their own licenses (stb_image: public domain or MIT).
+
+The checkpoint this recipe serves, Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold (Apache License 2.0), is a
+quantization of zai-org/GLM-5.3-Flash (MIT); the recipe downloads it from Hugging Face at a pinned revision and serves
+it as published.
+
+THE DEFAULT CONFIGURATION IS FOR NON-COMMERCIAL USE ONLY. With drafter = "dflash2", the default, the recipe downloads
+incoai/GLM-5.3-Flash-DFlash2 from Hugging Face at a pinned revision and sha256. Those weights are licensed
+CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/): non-commercial use only, no derivatives
+distributed. The recipe never redistributes or changes them on disk; the engine packs a copy in memory at load.
+Commercial licences: IncoAI (contact@inco.ai). For commercial use set drafter = "mtp": the recipe then downloads and
+uses none of IncoAI's weights.
+
+The quality suite downloads public datasets at run time, each pinned to a commit or a sha256: GSM8K's test split
+(openai/grade-school-math, MIT), IFEval's prompts (google-research/google-research, Apache License 2.0), MMLU
+(simple-evals' CSV, MIT), MGSM (MIT), HumanEval (openai/human-eval, MIT), MATH-500
+(HuggingFaceH4/MATH-500 from openai/prm800k and Hendrycks' MATH, MIT), GPQA-Diamond (simple-evals' CSV of
+idavidrein/gpqa, CC BY 4.0), ChartQA (HuggingFaceM4/ChartQA, GPL-3.0) and DocVQA (lmms-lab's mirror of the RRC
+validation split, research use). None of them is redistributed here; the long-tasks documents are generated.

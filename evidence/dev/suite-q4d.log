@@ -1,0 +1,1 @@
+quality suite: http://127.0.0.1:8888 as GLM-5.3-Flash-EXL3; checks: mgsm, mmlu, math500, gpqa, humaneval, repetition, long-context, long-tasks, soak, snapshot, vision, docvision, concurrent, vision-concurrent

@@ -1,0 +1,12 @@
+quality suite: http://127.0.0.1:8888 as GLM-5.3-Flash-EXL3; checks: drafts, behaviour, tools, json, ifeval, gsm8k, mgsm, mmlu, humaneval, repetition, long-context, soak, snapshot, vision, concurrent, vision-concurrent
+drafts            12/12     100.0%  (114s)  drafted 47 tok/s vs undrafted 31 tok/s
+streaming          4/4      100.0%  (24s)  identical
+multiturn          8/8      100.0%  (20s)  recalled 8/8 facts
+stop               3/3      100.0%  (1s)  3/3 stopped before the string
+thinking          10/10     100.0%  (39s)  0 replies without reasoning_content, 0 with think tags in content
+copy               2/2      100.0%  (3s)  2/2 byte-identical
+max-tokens         3/3      100.0%  (1s)  3/3 exact
+tools             57/60      95.0%  (219s)  'Set a timer for 5 minutes.': got [('set_timer', {'label': '5 minutes', 'seconds': 300})]
+json              30/30     100.0%  (18s)  all valid
+ifeval           117/150     78.0%  (701s)  loose 117/150, strict 111/150, 150 covered prompts
+gsm8k            242/250     96.8%  (670s)  misses at [12, 37, 43, 62, 70, 89, 119, 128]

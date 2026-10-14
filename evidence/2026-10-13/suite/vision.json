@@ -1,0 +1,34 @@
+{
+ "name": "vision",
+ "score": 1.0,
+ "cases": 6,
+ "passed": 6,
+ "seconds": 16.349807739257812,
+ "notes": [],
+ "details": {
+  "shapes": {
+   "reply": "Based on the image, here is a description of the shapes, colours, and text:\n\n**Shapes and Colours:**\n*   **Circle:** On the left side of the image, there is a solid red circle.\n*   **Square:** On the right side of the image, there is a solid blue square.\n\n**Text:**\n*   Below the shapes, the text reads: **\"GLM 42\"** (in bold, black font).",
+   "missing": []
+  },
+  "text": {
+   "reply": "The text in the image says:\n\n**TensorFold on DGX Spark**",
+   "missing": []
+  },
+  "count": {
+   "reply": "There are **3** triangles in the image, and they are **green**.",
+   "missing": []
+  },
+  "two images": {
+   "reply": "The first image is red, and the second image is yellow.",
+   "missing": []
+  },
+  "video motion": {
+   "reply": "The ball moves from left to right.",
+   "missing": []
+  },
+  "video colours": {
+   "reply": "The video begins with a blue background. It then transitions to a green background, which remains until the end. Therefore, the background is blue at the start and green at the end.",
+   "missing": []
+  }
+ }
+}

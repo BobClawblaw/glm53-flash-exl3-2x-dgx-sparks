@@ -1,0 +1,4 @@
+quality suite: http://127.0.0.1:8888 as GLM-5.3-Flash-EXL3; checks: mgsm, mmlu, math500, gpqa, humaneval, repetition, long-context, long-tasks, soak, snapshot, vision, docvision, concurrent, vision-concurrent
+mgsm             217/240     90.4%  (393s)  de 27/30, es 29/30, fr 25/30, ja 27/30, zh 28/30, ru 29/30, sw 24/30, bn 28/30
+mmlu             294/342     86.0%  (512s)  57 subjects x 6; weakest business_ethics 3/6, college_chemistry 3/6, virology 3/6
+math500          442/500     88.4%  (2097s)  L1 41/43 L2 82/90 L3 97/105 L4 115/128 L5 107/134, 11 without a boxed answer
