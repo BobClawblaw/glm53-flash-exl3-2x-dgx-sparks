@@ -82,9 +82,22 @@ stops with those steps. The first `up` then downloads the Ablit checkpoint (abou
 in the cache) and copies it to the worker. `ablit = false` in `cluster.toml` (or `ABLIT=0`) serves the published
 checkpoint, which stays in the cache; the two switch without a download once both are there.
 
-**The numbers in this README were measured on the published checkpoint** (`ablit = false`): the Ablit weights
-change the model's answers, not the engine, so the speed carries over except where the drafter's acceptance
-differs; the quality checks are the published checkpoint's until the Ablit weights' own `evidence/` lands.
+**The speed tables in this README are the published checkpoint's** (`ablit = false`), so they compare with
+Mia-AiLab's and tonyd2wild's numbers on the same weights. The Ablit weights, the default, measured the same way on
+the same image (`evidence/2026-10-14/ablit/`):
+
+| Ablit weights | prose | code | structured | list |
+|---|---|---|---|---|
+| one stream, greedy, tok/s (wall) | 45.2 (44.0) | 64.4 (62.5) | 50.9 (47.4) | 55.4 (55.3) |
+| one stream, sampled | 42.5 | 62.9 | 53.0 | 53.3 |
+| 8 streams, wall | 99.6 | 130.1 | 110.9 | 120.8 |
+| 16 streams, wall | 127.9 | 168.9 | 142.6 | 158.0 |
+
+Cold prefill 991 / 1,001 / 962 tok/s on the 6K / 30K / 114K-token prompts (the same as the published checkpoint's),
+decode after the 114K prompt 37.9 tok/s (41.6), a 67K-token chat's turn 2 in 0.14 s. Prose and list decode the same;
+code and structured run 7-10% slower on Ablit with the same number of draft rounds a reply (`ruler-ablit-c1.json`
+against `../ruler-shipped-14fb445e-c1.json`): the abliterated weights answer differently, and their replies are
+shorter (structured 142 tokens against 167). The quality checks on the Ablit weights are in `ablit/suite/`.
 
 ## What it serves
 

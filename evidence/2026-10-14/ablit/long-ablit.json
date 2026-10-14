@@ -1,0 +1,30 @@
+{
+ "w1200": {
+  "prompt_tokens": 1373,
+  "completion_tokens": 136,
+  "seconds": 4.3,
+  "sha": "cabf93210aa6",
+  "reply": "The vault code is 4471, and the ferry leaves at 17 past the hour.\n\nThe notes are a long, repetitive list of single words \u2014 mostly nature and object names like \"forest,\" \"bramble,\" \"compass,\" \"velvet,\" \"glacier,\" \"candle,\" \"orbit,\" \"walnut,\" and \"ledger\" \u2014 strung together with little grammatical structure. Two short sentences are embedded within the word stream: one stating the vault code (4471) and one stating the ferry departure time (17 past the hour). The overall effect reads like a word-list exercise or a memory/keyphrase drill rather than a coherent message."
+ },
+ "w4000": {
+  "prompt_tokens": 4466,
+  "completion_tokens": 70,
+  "seconds": 5.9,
+  "sha": "79ba92cc6729",
+  "reply": "The vault code is 4471, and the ferry leaves at 17 past the hour. The notes describe a landscape of forests, meadows, and rivers scattered with brambles, stones, and marble. They also mention a harbor with a lantern, a compass, and a candle, suggesting a journey by water guided by light."
+ },
+ "w16000": {
+  "prompt_tokens": 17701,
+  "completion_tokens": 135,
+  "seconds": 20.2,
+  "sha": "cb940cfa1fe9",
+  "reply": "# Vault Code & Ferry Time\n\n**Vault code:** 4471\n**Ferry departure:** 17 past the hour\n\n# Summary of the Notes\n\nThe notes consist of a long, repetitive list of nature-themed words\u2014such as *forest, bramble, compass, velvet, ledger, glacier, candle, orbit, walnut,* and *engine*\u2014strung together in no apparent grammatical order. Two practical details stand out amid the word stream: the vault code is 4471, and the ferry leaves at 17 past the hour. Otherwise, the text appears to be a cipher-like or decorative word sequence with no additional narrative content."
+ },
+ "w32000": {
+  "prompt_tokens": 35381,
+  "completion_tokens": 160,
+  "seconds": 38.5,
+  "sha": "628ac6faf220",
+  "reply": "# Vault Code & Ferry Time\n\n**Vault code:** 4471\n**Ferry departure:** 17 past the hour\n\n# Summary of the Notes\n\nThe notes consist of a long, repetitive stream of single words drawn from a small vocabulary of nature- and object-themed terms (e.g., *forest, bramble, compass, velvet, ledger, glacier, candle, orbit, walnut, engine, saddle, pepper, river, meadow, cinder, ribbon, lantern, garden, timber, harbor, anchor, quarry, thunder, violet, copper, signal, marble, stone, cloud, river*). The words appear in no obvious grammatical structure, reading more like a generated word list or cipher key than prose. Aside from the two embedded facts \u2014 the vault code "
+ }
+}

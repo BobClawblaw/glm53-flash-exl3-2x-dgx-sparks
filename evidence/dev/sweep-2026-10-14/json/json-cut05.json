@@ -1,0 +1,205 @@
+{
+  "label": "json-cut05",
+  "started": "2026-10-14 17:52:11",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 73.87,
+        "p90": 74.02,
+        "peak": 74.02,
+        "min": 73.25,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 73.33,
+        "p90": 73.47,
+        "peak": 73.47,
+        "min": 70.88,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.33,
+        "peak": 0.33,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.33,
+        "peak": 0.33,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.55,
+        "p90": 9.88,
+        "peak": 9.88,
+        "min": 9.53,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 63.77,
+        "p90": 63.93,
+        "peak": 63.93,
+        "min": 63.08,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 63.38,
+        "p90": 63.57,
+        "peak": 63.57,
+        "min": 61.4,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.09,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 3
+      },
+      "total_s": {
+        "median": 12.4,
+        "p90": 12.8,
+        "peak": 12.8,
+        "min": 12.36,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "sql": {
+      "decode_tok_s": {
+        "median": 62.48,
+        "p90": 63.9,
+        "peak": 63.9,
+        "min": 62.32,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 61.91,
+        "p90": 62.06,
+        "peak": 62.06,
+        "min": 61.48,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.19,
+        "p90": 9.25,
+        "peak": 9.25,
+        "min": 9.17,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 569,
+      "prompt_tokens": 76,
+      "spec": {}
+    },
+    "tooluse": {
+      "decode_tok_s": {
+        "median": 118282.11,
+        "p90": 296336.17,
+        "peak": 296336.17,
+        "min": 90108.05,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 62.7,
+        "p90": 62.74,
+        "peak": 62.74,
+        "min": 40.92,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.54,
+        "p90": 0.83,
+        "peak": 0.83,
+        "min": 0.54,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.54,
+        "p90": 0.83,
+        "peak": 0.83,
+        "min": 0.54,
+        "n": 3
+      },
+      "total_s": {
+        "median": 0.54,
+        "p90": 0.83,
+        "peak": 0.83,
+        "min": 0.54,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 34,
+      "prompt_tokens": 175,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 17:54:05"
+}
