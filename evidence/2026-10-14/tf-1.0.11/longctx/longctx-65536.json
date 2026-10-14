@@ -1,0 +1,18 @@
+{
+ "target_tokens": 65536,
+ "streams": 1,
+ "wall_s": 65.66,
+ "results": [
+  {
+   "prompt_tokens": 65526,
+   "cached_tokens": 0,
+   "completion_tokens": 6,
+   "ttft_s": 65.52,
+   "prefill_tok_s": 1000.0,
+   "decode_tok_s": 38.2,
+   "wall_s": 65.66,
+   "needle": true,
+   "reply": "4471 17"
+  }
+ ]
+}

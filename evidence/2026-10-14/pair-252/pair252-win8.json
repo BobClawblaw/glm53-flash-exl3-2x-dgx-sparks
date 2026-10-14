@@ -1,0 +1,111 @@
+{
+  "label": "pair252-win8",
+  "started": "2026-10-14 21:33:00",
+  "url": "http://192.0.2.252:8000",
+  "effort": "low",
+  "reps": 2,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 75.87,
+        "p90": 76.62,
+        "peak": 76.62,
+        "min": 75.12,
+        "n": 2
+      },
+      "e2e_tok_s": {
+        "median": 74.25,
+        "p90": 74.54,
+        "peak": 74.54,
+        "min": 73.97,
+        "n": 2
+      },
+      "ttft_s": {
+        "median": 0.21,
+        "p90": 0.34,
+        "peak": 0.34,
+        "min": 0.09,
+        "n": 2
+      },
+      "ttft_answer_s": {
+        "median": 0.21,
+        "p90": 0.34,
+        "peak": 0.34,
+        "min": 0.09,
+        "n": 2
+      },
+      "total_s": {
+        "median": 9.43,
+        "p90": 9.46,
+        "peak": 9.46,
+        "min": 9.39,
+        "n": 2
+      },
+      "think_chars": {
+        "median": 0.0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 2
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 69.66,
+        "p90": 70.12,
+        "peak": 70.12,
+        "min": 69.21,
+        "n": 2
+      },
+      "e2e_tok_s": {
+        "median": 68.38,
+        "p90": 68.78,
+        "peak": 68.78,
+        "min": 67.99,
+        "n": 2
+      },
+      "ttft_s": {
+        "median": 0.22,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 2
+      },
+      "ttft_answer_s": {
+        "median": 0.22,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.09,
+        "n": 2
+      },
+      "total_s": {
+        "median": 11.36,
+        "p90": 11.43,
+        "peak": 11.43,
+        "min": 11.3,
+        "n": 2
+      },
+      "think_chars": {
+        "median": 0.0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 2
+      },
+      "completion_tokens": 777,
+      "prompt_tokens": 81,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 21:34:00"
+}

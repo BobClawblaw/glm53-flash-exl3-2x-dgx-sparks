@@ -1,0 +1,29 @@
+{
+ "target_tokens": 65536,
+ "streams": 2,
+ "wall_s": 65.87,
+ "results": [
+  {
+   "prompt_tokens": 65526,
+   "cached_tokens": 65525,
+   "completion_tokens": 6,
+   "ttft_s": 65.71,
+   "prefill_tok_s": 997.2,
+   "decode_tok_s": 31.8,
+   "wall_s": 65.87,
+   "needle": true,
+   "reply": "4471 17"
+  },
+  {
+   "prompt_tokens": 65539,
+   "cached_tokens": 0,
+   "completion_tokens": 6,
+   "ttft_s": 65.66,
+   "prefill_tok_s": 998.1,
+   "decode_tok_s": 24.6,
+   "wall_s": 65.86,
+   "needle": true,
+   "reply": "4471 17"
+  }
+ ]
+}

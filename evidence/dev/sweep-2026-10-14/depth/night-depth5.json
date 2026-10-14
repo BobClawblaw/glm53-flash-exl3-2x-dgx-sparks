@@ -1,0 +1,205 @@
+{
+  "label": "night-depth5",
+  "started": "2026-10-14 20:59:45",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 73.56,
+        "p90": 74.41,
+        "peak": 74.41,
+        "min": 73.55,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 73.03,
+        "p90": 73.03,
+        "peak": 73.03,
+        "min": 71.94,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.34,
+        "peak": 0.34,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.34,
+        "peak": 0.34,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.59,
+        "p90": 9.73,
+        "peak": 9.73,
+        "min": 9.59,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 65.36,
+        "p90": 65.45,
+        "peak": 65.45,
+        "min": 64.06,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 64.99,
+        "p90": 65.08,
+        "peak": 65.08,
+        "min": 62.32,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.36,
+        "peak": 0.36,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 12.09,
+        "p90": 12.61,
+        "peak": 12.61,
+        "min": 12.08,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "sql": {
+      "decode_tok_s": {
+        "median": 64.8,
+        "p90": 64.99,
+        "peak": 64.99,
+        "min": 64.29,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 63.85,
+        "p90": 64.34,
+        "peak": 64.34,
+        "min": 62.49,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 8.91,
+        "p90": 9.11,
+        "peak": 9.11,
+        "min": 8.84,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 569,
+      "prompt_tokens": 76,
+      "spec": {}
+    },
+    "prose": {
+      "decode_tok_s": {
+        "median": 42.97,
+        "p90": 43.26,
+        "peak": 43.26,
+        "min": 42.85,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 42.69,
+        "p90": 42.81,
+        "peak": 42.81,
+        "min": 42.39,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 13.91,
+        "p90": 14.01,
+        "peak": 14.01,
+        "min": 13.87,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 594,
+      "prompt_tokens": 50,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 21:02:17"
+}
