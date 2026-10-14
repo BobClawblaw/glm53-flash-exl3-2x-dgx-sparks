@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-14 (later)
+
+- **The published checkpoint is the default again** (`ablit = false`): `spark up` needs no Hugging Face account or
+  token. `ablit = true` (`cluster.toml`, or `ABLIT=1`) opts into Mia's AI Lab's gated Ablit weights, downloaded and
+  checked as before. The README's speed and quality tables are the published checkpoint's; the Ablit section carries
+  the Ablit numbers.
+
 ## 2026-10-14
 
 - **Prompts 3.6x faster: the EXL3 experts' prompt kernel in the transposed design** (`TF_GLM_EXL3_PROMPT=fused`, the

@@ -9,4 +9,4 @@ port = 8000
 parallel = 16
 
 # [model]
-# ablit = false                   # the published checkpoint instead of the default gated Ablit weights (README, "Ablit weights")
+# ablit = true                    # Mia's AI Lab's abliterated weights instead of the published checkpoint (gated; README, "Ablit weights")

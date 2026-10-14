@@ -30,21 +30,18 @@ class GuardTests(unittest.TestCase):
         s = load()
         self.assertEqual((s.context, s.drafts, s.thinking, s.vision), (1048576, True, False, True))
         self.assertEqual((s.dense_bits, s.head_bits, s.draft_head_bits, s.parallel), (4, 8, 4, 16))
-        self.assertEqual(s.model_in_container, f"/cache/huggingface/hub/models--Mia-AiLab--GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit/snapshots/{s.revision}")
+        self.assertEqual(s.model_in_container, f"/cache/huggingface/hub/models--Mia-AiLab--GLM-5.3-Flash-EXL3-4bpw-TensorFold/snapshots/{s.revision}")
         self.assertEqual(hashlib.sha256(s.patch_path.read_bytes()).hexdigest(), s.patch_sha256)
 
-    def test_ablit_is_the_default_and_the_published_checkpoint_the_switch(self) -> None:
+    def test_the_published_checkpoint_is_the_default_and_ablit_the_switch(self) -> None:
         s = load()
-        self.assertTrue(s.ablit)
-        self.assertEqual((s.repo, s.revision[:8]), ("Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit", "57edefd2"))
-        self.assertIn("(ablit)", s.summary())
-        p = load(ABLIT="0")
-        self.assertFalse(p.ablit)
-        self.assertEqual((p.repo, p.revision), (s.published_repo, s.published_revision))
-        self.assertEqual(p.revision[:8], "76c0b517")
-        self.assertNotIn("(ablit)", p.summary())
-        self.assertNotEqual(s.snapshot_dir, p.snapshot_dir)   # both checkpoints keep their own cache folder
-        self.refused("published_revision", PUBLISHED_REVISION="main")
+        self.assertFalse(s.ablit)
+        self.assertEqual((s.repo, s.revision[:8]), ("Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold", "76c0b517"))
+        self.assertNotIn("(ablit)", s.summary())
+        p = load(ABLIT="1")
+        self.assertTrue(p.ablit)
+        self.assertEqual((p.repo, p.revision[:8]), ("Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit", "57edefd2"))
+        self.assertIn("(ablit)", p.summary())
 
     def test_packed_bits_and_vision(self) -> None:
         env = load(DENSE_BITS="4", HEAD_BITS="0").container_env()
@@ -66,7 +63,8 @@ class GuardTests(unittest.TestCase):
         self.refused("not a decimal integer", PORT="x")
         self.refused("outside", PORT="70000")
         self.refused("0/1 or true/false", DRAFTS="yes")
-        self.refused("40-hex", REVISION="main")
+        self.refused("40-hex", PUBLISHED_REVISION="main")
+        self.refused("40-hex", REVISION="main", ABLIT="1")
         self.refused("0/1 or true/false", MEMGUARD="maybe")
 
     def test_extra_args_cannot_reset_owned_flags(self) -> None:

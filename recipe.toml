@@ -4,11 +4,12 @@
 [model]
 # Mia's AI Lab's EXL3 quantization of GLM-5.3-Flash (4-bit "mcg" trellis for the routed experts, everything else
 # BF16), served as published: the engine reads the trellises and scales where the checkpoint keeps them.
-# ablit = true (the default) serves the Ablit weights: the same checkpoint, abliterated by Mia's AI Lab (README,
+# ablit = false (the default) serves the published checkpoint, no account needed. ablit = true (cluster.toml, or
+# ABLIT=1) serves the Ablit weights: the same checkpoint, abliterated by Mia's AI Lab (README,
 # "Ablit weights"). The repository is gated: `spark up` needs a Hugging Face token (HF_TOKEN, or `hf auth login`)
 # whose account was granted access on the model's page, and stops before the download with the steps otherwise.
-# ablit = false (cluster.toml, or ABLIT=0) serves the published checkpoint below instead; each stays in the cache.
-ablit = true
+# access on the model page); each checkpoint stays in the cache.
+ablit = false
 repo = "Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit"
 revision = "57edefd2f5d9b371c8345883304d5af68b52fa24"
 published_repo = "Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold"
