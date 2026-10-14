@@ -38,10 +38,10 @@
   `suite-soak/`, `suite-docvision/`): ChartQA 147/200, DocVQA 112/200 at ANLS 0.5, long-tasks 36/40, concurrent
   12/12. The soak's replies are 60/60 equal and its resumes 0/60: a chat's next turn does not resume its kept state on
   this build (the state is sized for the turn that made it); the fix is in the next engine patch.
-- **The Ablit weights measured** (`evidence/2026-10-14/ablit/`): one stream 45.2 / 64.4 / 50.9 / 55.4 tok/s (prose /
-  code / structured / list), 8 streams 99.6-130.1, 16 streams 127.9-168.9 wall, prefill 991 / 1,001 / 962 tok/s, a
-  67K-token chat's turn 2 in 0.14 s. Code and structured decode 7-10% slower than the published checkpoint at the
-  same draft rounds a reply; prose, list and prefill the same.
+- **The Ablit weights measured** (`evidence/2026-10-14/ablit/`): one stream 46.1 / 65.7 / 57.8 / 56.2 tok/s (prose /
+  code / structured / list, a clean boot), 8 streams 99.6-130.1, 16 streams 127.9-168.9 wall, prefill 991 / 1,001 /
+  962 tok/s, a 67K-token chat's turn 2 in 0.14 s. Code decodes about 5% slower than the published checkpoint with
+  shorter replies; prose, structured, list and prefill the same.
 - **Quality harness.** `quality/soak.py`: the `background` flag shadowed the helper that sends the side decode, so
   every round's background request failed and the check scored itself 0 (the replies were 60/60 equal); the helper is
   `story()` now. `quality/docvision.py`: a picture the server refuses (HTTP 400, e.g. over its 16-megapixel decode

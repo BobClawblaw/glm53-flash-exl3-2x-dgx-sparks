@@ -88,16 +88,17 @@ the same image (`evidence/2026-10-14/ablit/`):
 
 | Ablit weights | prose | code | structured | list |
 |---|---|---|---|---|
-| one stream, greedy, tok/s (wall) | 45.2 (44.0) | 64.4 (62.5) | 50.9 (47.4) | 55.4 (55.3) |
+| one stream, greedy, tok/s (wall) | 46.1 (44.7) | 65.7 (63.3) | 57.8 (52.2) | 56.2 (56.1) |
 | one stream, sampled | 42.5 | 62.9 | 53.0 | 53.3 |
 | 8 streams, wall | 99.6 | 130.1 | 110.9 | 120.8 |
 | 16 streams, wall | 127.9 | 168.9 | 142.6 | 158.0 |
 
 Cold prefill 991 / 1,001 / 962 tok/s on the 6K / 30K / 114K-token prompts (the same as the published checkpoint's),
-decode after the 114K prompt 37.9 tok/s (41.6), a 67K-token chat's turn 2 in 0.14 s. Prose and list decode the same;
-code and structured run 7-10% slower on Ablit with the same number of draft rounds a reply (`ruler-ablit-c1.json`
-against `../ruler-shipped-14fb445e-c1.json`): the abliterated weights answer differently, and their replies are
-shorter (structured 142 tokens against 167). The quality checks on the Ablit weights are in `ablit/suite/`.
+decode after the 114K prompt 37.9 tok/s (41.6), a 67K-token chat's turn 2 in 0.14 s. Prose, structured and list decode
+the same as the published checkpoint; code about 5% slower, its replies shorter (247 tokens against 256) at the same
+draft rounds a reply. The greedy row is `ruler-ablit-c1-clean.json`, a clean boot; the first boot's ruler
+(`ruler-ablit-c1.json`, taken while a compile ran) read 64.4 / 50.9 on code and structured, and the sampled, 8- and
+16-stream rows come from that boot. The quality checks on the Ablit weights are in `ablit/suite/`.
 
 ## What it serves
 
