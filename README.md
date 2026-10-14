@@ -3,10 +3,10 @@
 Serve Mia's AI Lab's EXL3 quantization of GLM-5.3-Flash (4-bit "mcg" trellis routed experts, every other weight
 BF16; a quantization of zai-org's GLM-5.3-Flash, MIT) across two NVIDIA DGX Spark (GB10, 128 GB) nodes with
 [TensorFold](https://github.com/ashhart/TensorFold)'s native (Zig) engine at tensor-parallel 2. By default the recipe
-serves the **Ablit weights**, [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit)
-(the same checkpoint, abliterated; a gated repository, see [Ablit weights](#ablit-weights)); `ablit = false` serves
-the published [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold)
-(Apache-2.0). Either way:
+serves the published [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold)
+(Apache-2.0), no account needed; `ablit = true` serves the **Ablit weights**,
+[Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit)
+(the same checkpoint, abliterated; a gated repository, see [Ablit weights](#ablit-weights)). Either way:
 
 - up to 16 requests decoding together, each with the model's full 1,048,576-token window;
 - image and video inputs;
@@ -46,10 +46,9 @@ python3 -m spark down
 `up` builds the image on the head (TensorFold v1.0.7 with the patch, `docker/Dockerfile.native`), downloads the
 pinned snapshot (about 176 GB), copies the image and the snapshot to the worker, and starts rank 1 there and rank 0 on
 the head. Requirements: two GB10 nodes linked by ConnectX-7 (RoCE), Docker with the NVIDIA runtime on both,
-passwordless ssh from the head to the worker, about 210 GB free on each node, the `hf` CLI on the head, and for the
-default Ablit weights a Hugging Face token whose account has access to their gated repository (`HF_TOKEN`, or
-`hf auth login`; [Ablit weights](#ablit-weights)). `up` checks that the token reaches the files before it downloads
-anything and says what to do when it does not.
+passwordless ssh from the head to the worker, about 210 GB free on each node and the `hf` CLI on the head. No
+account or token: the published checkpoint is public. Only the opt-in [Ablit weights](#ablit-weights) need a Hugging
+Face token whose account has access to their gated repository.
 
 The API is OpenAI-style (`/v1/chat/completions`, `/v1/completions`, `/v1/models`) and Anthropic-style
 (`/v1/messages`) at `http://<head>:<port>`; the model is named `GLM-5.3-Flash-EXL3`.
@@ -62,7 +61,7 @@ the rest.
 
 ## Ablit weights
 
-`ablit = true` (the default) serves
+`ablit = true` (in `cluster.toml`, or `ABLIT=1`; the default is `false`) serves
 [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit):
 Mia's AI Lab's abliteration of the same EXL3 checkpoint (the refusal direction removed from the weights; the method,
 its verification and the responsible-use terms are on the model's page), at the revision pinned in `recipe.toml`
@@ -79,12 +78,11 @@ think (`reasoning_effort`, or `chat_template_kwargs.enable_thinking`). The repos
 `up` sends one `HEAD` request for the pinned `config.json` before anything else: `401` means Hugging Face rejects
 the token, `403` that the account has no access yet (or a fine-grained token cannot read gated repositories); it
 stops with those steps. The first `up` then downloads the Ablit checkpoint (about 176 GB, beside the published one
-in the cache) and copies it to the worker. `ablit = false` in `cluster.toml` (or `ABLIT=0`) serves the published
-checkpoint, which stays in the cache; the two switch without a download once both are there.
+in the cache) and copies it to the worker. Without `ablit = true` the published checkpoint is served and nothing is
+gated; the two switch without a download once both are in the cache.
 
-**The speed tables in this README are the published checkpoint's** (`ablit = false`), so they compare with
-Mia-AiLab's and tonyd2wild's numbers on the same weights. The Ablit weights, the default, measured the same way on
-the same image (`evidence/2026-10-14/ablit/`):
+**The speed tables in this README are the published checkpoint's** (the default), so they compare with
+Mia-AiLab's and tonyd2wild's numbers on the same weights. The Ablit weights, measured the same way on the same image (`evidence/2026-10-14/ablit/`):
 
 | Ablit weights | prose | code | structured | list |
 |---|---|---|---|---|
@@ -147,7 +145,7 @@ passage runs at 15 tokens a round (69 tok/s against 58 with 8-row windows).
 Two DGX Sparks (GB10, 128 GB each) over one ConnectX-7 RoCE link, TensorFold v1.0.7 native with this recipe's patch,
 the defaults (1,048,576-token window, 4-bit dense / 8-bit head, EXL3 experts, DFlash2 with its 4-bit draft head,
 copy drafts with 16-row windows, one-shot RoCE gathers up to 4 MiB, vision on), on the published checkpoint
-(`ablit = false`; [Ablit weights](#ablit-weights)). The ruler is `bench/ruler.py`:
+(the default; [Ablit weights](#ablit-weights) for the abliterated form). The ruler is `bench/ruler.py`:
 greedy, 256-token replies, thinking off, a distinct prompt per stream. "Wall" is every token of a wave over its wall
 time. The shipped image, `evidence/2026-10-14/ruler-shipped-14fb445e-c{1,8,16}.json`; the previous image's numbers
 (the old prompt kernel, 2026-10-13) are `evidence/2026-10-13/`.
@@ -245,7 +243,7 @@ within 2% on every row (`evidence/2026-10-13/tonyd-harness/ours-ctx1048576.json`
 
 ## Quality
 
-`python3 -m quality.suite` (greedy, thinking off) on the published checkpoint (`ablit = false`),
+`python3 -m quality.suite` (greedy, thinking off) on the published checkpoint (the default),
 `evidence/2026-10-13/suite/` (`report.md`, the previous image); the soak and the document checks reran after harness
 fixes in `suite-soak/` and `suite-docvision/`. The fused prompt kernel's image reran the reasoning and instruction
 checks (`evidence/2026-10-14/suite-ab/`): the second number where there is one. The kernel changes a prompt's rounding
@@ -318,7 +316,7 @@ This recipe is a thin layer over other people's work. Each line names what was t
 
 - **The model:** [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash) by Z.ai (MIT).
 - **The checkpoint:** [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold)
-  by Mia's AI Lab (Apache-2.0), served as published, and its abliterated form, the default here,
+  by Mia's AI Lab (Apache-2.0), served as published by default, and its abliterated form, the `ablit = true` option,
   [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit](https://huggingface.co/Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit)
   (gated; the abliteration, its verification and the responsible-use terms are Mia's AI Lab's, on the model's page).
   `ablit = true` follows the `ABLIT=1` mode of their Python-engine recipe (v1.7): the same pinned revision, thinking

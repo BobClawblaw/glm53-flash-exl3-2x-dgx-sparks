@@ -59,7 +59,7 @@ GATED_HELP = ("The Ablit weights ({repo}) are gated on Hugging Face.\n"
               "  1. Open https://huggingface.co/{repo}, log in and request access (Mia's AI Lab grants it per account).\n"
               "  2. With the same account, create a token with read access at https://huggingface.co/settings/tokens.\n"
               "  3. Set HF_TOKEN=hf_... in the environment (or `hf auth login`), then `python3 -m spark up` again.\n"
-              "  Or set ablit = false (cluster.toml) or ABLIT=0 to serve the published checkpoint.")
+              "  Or leave ablit = false (the default) to serve the published checkpoint.")
 
 
 def check_gated_access(s: Settings) -> None:

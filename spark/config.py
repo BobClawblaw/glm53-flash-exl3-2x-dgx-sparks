@@ -30,7 +30,7 @@ class ConfigError(ValueError):
 @dataclass
 class Settings:
     # [model]
-    ablit: bool                      # the Ablit weights (gated) as `repo`; false: `published_repo` served instead
+    ablit: bool                      # true: the Ablit weights (gated) as `repo`; false (the default): `published_repo`
     repo: str
     revision: str
     published_repo: str

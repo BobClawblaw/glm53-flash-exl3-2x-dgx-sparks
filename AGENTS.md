@@ -1,8 +1,8 @@
 # Working on this recipe
 
 Serve Mia's AI Lab's EXL3 GLM-5.3-Flash as published on two DGX Sparks with TensorFold's native engine at TP=2, up to
-16 requests at once: by default the gated Ablit weights (`Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit`,
-`ablit = true`, needs `HF_TOKEN`), with `ablit = false` the published `Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold`.
+16 requests at once: by default the published `Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold`; with `ablit = true`
+(needs `HF_TOKEN`) the gated Ablit weights `Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold-Ablit`.
 Stdlib Python only, no harness dependencies. Say which checkpoint every measurement used (the README's numbers so far
 are the published checkpoint's).
 
