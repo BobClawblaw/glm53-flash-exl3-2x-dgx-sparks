@@ -11,7 +11,7 @@ serves the published [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold](https://hugg
 - up to 16 requests decoding together, each with the model's full 1,048,576-token window;
 - image and video inputs;
 - IncoAI's DFlash2 block drafter by default (**non-commercial weights**, see below), or the checkpoint's own MTP head,
-  plus copy drafts verified in windows of up to 16 rows;
+  plus copy drafts, verified in windows of up to 8 rows;
 - kept prompt states for multi-turn chats and agents, tool calls, and an OpenAI- and Anthropic-compatible API;
 - a memory guard that stops a rank cleanly before the unified memory runs out;
 - a systemd unit.
@@ -25,7 +25,7 @@ serves the published [Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold](https://hugg
 > Commercial licences for DFlash2 are IncoAI's to grant (contact@inco.ai). The recipe's own files are MIT and the
 > engine patch is Apache-2.0, whichever drafter you pick ([NOTICE](NOTICE)). This is not legal advice.
 
-TensorFold v1.0.7 serves GLM-5.3-Flash natively on Macs only. This recipe adds a GLM-5.3-Flash family for two CUDA
+TensorFold v1.0.11 serves GLM-5.3-Flash natively on Macs only. This recipe adds a GLM-5.3-Flash family for two CUDA
 ranks to the native engine (the patch, [`docker/patches/README.md`](docker/patches/README.md)) and serves Mia-AiLab's
 checkpoint **as published**: the engine reads the EXL3 trellises and scales where the checkpoint keeps them. At load
 it packs the dense linears to 4 bits and the head to 8 (symmetric, a scale per 64 inputs; `dense_bits`, `head_bits`,
@@ -43,7 +43,7 @@ python3 -m spark status
 python3 -m spark down
 ```
 
-`up` builds the image on the head (TensorFold v1.0.7 with the patch, `docker/Dockerfile.native`), downloads the
+`up` builds the image on the head (TensorFold v1.0.11 with the patch, `docker/Dockerfile.native`), downloads the
 pinned snapshot (about 176 GB), copies the image and the snapshot to the worker, and starts rank 1 there and rank 0 on
 the head. Requirements: two GB10 nodes linked by ConnectX-7 (RoCE), Docker with the NVIDIA runtime on both,
 passwordless ssh from the head to the worker, about 210 GB free on each node and the `hf` CLI on the head. No
@@ -137,37 +137,41 @@ tool calls 59/60 (59), JSON 30/30 (30), MGSM 221/240 (223). The abliteration cos
   on code, as fast or faster on prose and lists.
 
 Both run with **copy drafts**. When the last 8 tokens of a stream's history occurred earlier in its prompt (16
-inside the reply), the tokens that followed are drafted, and a window verifies up to 15 of them. Repeating or editing a
-passage runs at 15 tokens a round (69 tok/s against 58 with 8-row windows).
+inside the reply), the tokens that followed are drafted. **A verify window holds 8 rows** (`TF_GLM_WINDOW=8` in the
+recipe's `extra_env`): the drafter proposes more than lands on JSON and code, and each extra row costs a verify step
+its bytes, so 8 rows decode JSON 17% faster than 16 and code and SQL 4% (`evidence/dev/sweep-2026-10-14/depth/`).
+The price is verbatim repetition: repeating a 640-token passage runs at 95 tok/s against 131 with 16-row windows,
+which suit an editing workload better (`TF_GLM_WINDOW=16` in `cluster.toml`'s `extra_env`, keeping
+`TF_ROCE_MAX_KB=4096` beside it).
 
 ## Measured on this pair
 
-Two DGX Sparks (GB10, 128 GB each) over one ConnectX-7 RoCE link, TensorFold v1.0.7 native with this recipe's patch,
+Two DGX Sparks (GB10, 128 GB each) over one ConnectX-7 RoCE link, TensorFold v1.0.11 native with this recipe's patch,
 the defaults (1,048,576-token window, 4-bit dense / 8-bit head, EXL3 experts, DFlash2 with its 4-bit draft head,
-copy drafts with 16-row windows, one-shot RoCE gathers up to 4 MiB, vision on), on the published checkpoint
+copy drafts, 8-row verify windows, one-shot RoCE gathers up to 4 MiB, vision on), on the published checkpoint
 (the default; [Ablit weights](#ablit-weights) for the abliterated form). The ruler is `bench/ruler.py`:
 greedy, 256-token replies, thinking off, a distinct prompt per stream. "Wall" is every token of a wave over its wall
-time. The shipped image, `evidence/2026-10-14/ruler-shipped-14fb445e-c{1,8,16}.json`; the previous image's numbers
-(the old prompt kernel, 2026-10-13) are `evidence/2026-10-13/`.
+time. The shipped image, `evidence/2026-10-14/tf-1.0.11/ruler-shipped-addfa527-c{1,8,16}.json`; the previous
+image's numbers (TensorFold v1.0.7, the old prompt kernel, 16-row windows, 2026-10-13) are `evidence/2026-10-13/`.
 
 One stream, every prompt of a phase in turn (`--concurrency 1 --waves 16`), tok/s per stream (wall):
 
 | | prose | code | structured | list |
 |---|---|---|---|---|
-| this release | 45.4 (44.9) | 69.4 (65.1) | 56.4 (52.6) | 55.3 (55.0) |
+| this release | 45.6 (45.0) | 70.1 (66.1) | 57.0 (53.0) | 56.8 (55.7) |
 | 2026-10-13 | 45.9 (44.6) | 69.8 (65.1) | 56.7 (52.0) | 56.1 (54.8) |
-| | -1.0% | -0.6% | -0.5% | -1.4% |
+| | -0.7% | +0.3% | +0.6% | +1.2% |
 
 Streams together (`--concurrency 8 --waves 2 --runs 2`, `--concurrency 16 --runs 2`), tok/s over the wave's wall time:
 
 | | prose | code | structured | list |
 |---|---|---|---|---|
-| 8 streams, this release | 101.7 | 135.4 | 114.8 | 120.9 |
+| 8 streams, this release | 100.9 | 133.4 | 113.0 | 119.3 |
 | 8 streams, 2026-10-13 | 101.8 | 134.5 | 112.5 | 120.6 |
-| | -0.2% | +0.7% | +2.0% | +0.2% |
-| 16 streams, this release | 131.4 | 172.8 | 147.2 | 158.9 |
+| | -0.9% | -0.9% | +0.5% | -1.1% |
+| 16 streams, this release | 128.7 | 168.1 | 143.2 | 154.6 |
 | 16 streams, 2026-10-13 | 129.8 | 173.7 | 140.5 | 156.0 |
-| | +1.2% | -0.5% | +4.8% | +1.8% |
+| | -0.8% | -3.2% | +1.9% | -0.9% |
 
 `drafter = "mtp"` (commercial use) was 46.1 / 55.8 / 54.0 / 55.7 per stream on 2026-10-12 and is unchanged by this
 release's drafter work.
@@ -189,7 +193,7 @@ all-gathers a layer.
 
 ## Against other recipes
 
-Numbers from `evidence/2026-10-14/` (Mia-AiLab's rulers from `evidence/2026-10-13/`); `python3 bench/compare.py` renders each table from its two files. The
+Numbers from `evidence/2026-10-14/tf-1.0.11/` (Mia-AiLab's rulers from `evidence/2026-10-13/`); `python3 bench/compare.py` renders each table from its two files. The
 percentage is this recipe against the other.
 
 **Mia-AiLab's recipe for the same checkpoint** (TensorFold's Python engine v0.6.0 with their patches, on another
@@ -197,8 +201,8 @@ pair), the same ruler, one stream:
 
 | | prose | code | structured | list |
 |---|---|---|---|---|
-| greedy, this recipe / theirs | 45.4 / 45.1 (**+0.8%**) | 69.4 / 69.1 (**+0.4%**) | 56.4 / 61.2 (-7.8%) | 55.3 / 58.3 (-5.1%) |
-| sampled (temperature 1, top_p 0.95), this recipe / theirs | 45.2 / 45.7 (-1.0%) | 65.4 / 57.4 (**+13.8%**) | 56.2 / 57.2 (-1.7%) | 54.9 / 55.5 (-1.2%) |
+| greedy, this recipe / theirs | 45.6 / 45.1 (**+1.1%**) | 70.1 / 69.1 (**+1.3%**) | 57.0 / 61.2 (-6.8%) | 56.8 / 58.3 (-2.5%) |
+| sampled (temperature 1, top_p 0.95), this recipe / theirs | 45.1 / 45.7 (-1.3%) | 66.1 / 57.4 (**+15.0%**) | 55.8 / 57.2 (-2.3%) | 55.4 / 55.5 (-0.2%) |
 
 Eight streams: that server runs them one after another (41.8 / 62.2 / 52.4 / 60.4 wall); this one runs them
 together (see above).
@@ -210,28 +214,38 @@ low`, median of 3), their published lane A against this recipe's branch head at 
 
 | prompt | this recipe | theirs | |
 |---|---|---|---|
-| count to 100 / 300 | 95.6 / 93.4 | 96.4 / 93.0 | −0.9% / +0.5% |
-| code | 73.1 | 68.9 | **+6.0%** |
-| json | 64.0 | 71.0 | **−9.9%** |
-| sql | 63.1 | 60.3 | +4.6% |
-| tool call (end to end) | 66.7 | 40.4 | +65.0% |
-| math | 66.8 | 65.4 | +2.1% |
-| prose / narrative / summary | 42.1 / 40.6 / 45.5 | 35.3 / 35.3 / 41.8 | +19.2% / +15.0% / +9.0% |
+| count to 100 / 300 | 98.2 / 95.9 | 96.4 / 93.0 | +1.8% / +3.1% |
+| code | 75.6 | 68.9 | **+9.7%** |
+| json | 74.0 | 71.0 | **+4.2%** |
+| sql | 65.0 | 60.3 | +7.7% |
+| tool call (end to end) | 70.9 | 40.4 | +75.5% |
+| math | 66.9 | 65.4 | +2.2% |
+| prose / narrative / summary | 42.2 / 40.7 / 45.7 | 35.3 / 35.3 / 41.8 | +19.4% / +15.3% / +9.4% |
 
 Mixed prompts together, aggregate tok/s (median of 3 rounds):
 
 | streams | 1 | 2 | 3 | 4 | 5 | 6 |
 |---|---|---|---|---|---|---|
-| this recipe | 62.3 | 59.6 | 69.3 | 95.2 | 82.3 | 87.3 |
+| this recipe | 71.0 | 61.3 | 69.4 | 96.6 | 81.8 | 86.8 |
 | theirs | 63.3 | 57.2 | 46.4 | 71.5 | 46.3 | 65.7 |
-| | −1.6% | +4.1% | **+49.5%** | **+33.1%** | **+77.9%** | **+32.9%** |
+| | **+12.2%** | +7.1% | **+49.6%** | **+35.2%** | **+76.8%** | **+32.2%** |
 
 Long prompts:
 
 | | this recipe | theirs | |
 |---|---|---|---|
-| cold prefill, 6K / 30K / 114K-token prompt | 991 / 1,001 / 957 tok/s (6.0 / 29.8 / 119.0 s) | 1,121 / 1,200 / 1,225 (5.3 / 24.9 / 93.0 s) | −11.6% / −16.6% / −21.9% |
-| decode after a 114K-token prompt, 1 / 2 at once | 41.6 / 16.2 | 26.9 / 14.0 | +54.6% / +15.9% |
+| cold prefill, 6K / 30K / 114K-token prompt | 991 / 1,002 / 950 tok/s (6.0 / 29.8 / 119.9 s) | 1,121 / 1,200 / 1,225 (5.3 / 24.9 / 93.0 s) | −11.6% / −16.5% / −22.5% |
+| decode after a 114K-token prompt, 1 / 2 at once | 42.0 / 15.3 | 26.9 / 14.0 | +56.0% / +9.2% |
+
+At 64K, 128K and 256K tokens (`bench/longctx.py`: a document sized to the token count with two facts buried at a
+third and two thirds, `evidence/2026-10-14/tf-1.0.11/longctx/`):
+
+| prompt | prefill | time to first token | both facts in the reply |
+|---|---|---|---|
+| 65,526 tokens | 1,000 tok/s | 65.5 s | yes |
+| 131,073 tokens | 959 tok/s | 136.6 s | yes |
+| 262,144 tokens | 902 tok/s | 290.6 s | yes |
+| 2 x 65K tokens at once | 998 tok/s each | 65.7 s, both | yes, both |
 
 The previous image prefilled at 272 / 270 / 268 tok/s (`evidence/2026-10-13/tonyd-harness/`): 3.6x slower. Mia-AiLab's
 recipe prefills at 627-697 tok/s on the same prompts (30K and 114K), so this recipe is 43-60% faster than theirs
@@ -307,6 +321,8 @@ through `extra_env`) are listed in [`docker/patches/README.md`](docker/patches/R
   (sandboxed), repetition, long-context needles, long-context tasks (RULER-style), the kept-state soak, vision,
   ChartQA and DocVQA, and the concurrency checks.
 - `bench/ruler.py --url ... --concurrency 1 8`: the decode ruler.
+- `bench/longctx.py --url ... --out DIR [--sizes 65536,131072,262144] [--streams N]`: prompts at exact token
+  counts with two buried facts: prefill rate, time to the first token, decode after, whether the reply has the facts.
 - The engine's own checks, on the patched TensorFold tree: `tf-cuda-test glm-batch` (16 streams together equal to
   each alone, serial and drafted; resumed equal to fresh).
 

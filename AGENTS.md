@@ -10,10 +10,10 @@ are the published checkpoint's).
   - Settings come from `recipe.toml` (defaults), then `cluster.toml` per cluster (git-ignored), then environment
     variables in upper case.
   - `python3 -m spark validate` is the dry run.
-- **The patch** (`docker/patches/tensorfold-native-v1.0.7-glm.patch`, `git diff v1.0.7 <head>` of the port) is
+- **The patch** (`docker/patches/tensorfold-native-v1.0.11-glm.patch`, `git diff v1.0.11 <head>` of the port) is
   pinned by sha256 in `recipe.toml`. Never edit it in place. Change the port's branch, run `tf-cuda-test glm-batch`
   on both ranks (16 streams together equal to each alone, serial and drafted; resumed equal to fresh) and the ruler,
-  then regenerate, check that `git apply --check` passes on a clean v1.0.7, re-pin, `spark image --rebuild`, and
+  then regenerate, check that `git apply --check` passes on a clean v1.0.11, re-pin, `spark image --rebuild`, and
   rerun the suite.
 - **Drafts never change a reply.** Copy drafts and DFlash2 only propose, and the target verifies. Any change to the
   drafting paths must keep `glm-batch` passing.

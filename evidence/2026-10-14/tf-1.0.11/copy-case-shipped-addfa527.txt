@@ -1,0 +1,1 @@
+copy case: 641 tokens in 6.71 s after the first token = 95.5 tok/s (ttft 0.83 s)

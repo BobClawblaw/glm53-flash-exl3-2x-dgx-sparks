@@ -21,11 +21,11 @@ served_name = "GLM-5.3-Flash-EXL3"
 # CUDA ranks (its own kernels, EXL3 routed experts, up to 16 streams in one batched step), built by
 # docker/Dockerfile.native.
 tensorfold_repo = "https://github.com/ashhart/TensorFold.git"
-tensorfold_sha = "e7c523ebfa16b8094cf9e35e3773a7d25befcc5b"     # v1.0.7 (main)
-patch = "tensorfold-native-v1.0.7-glm.patch"
+tensorfold_sha = "ffa85fd52fa55c76c9230e3f6189f3efd652de52"     # v1.0.11
+patch = "tensorfold-native-v1.0.11-glm.patch"
 # sha256 of docker/patches/<patch>; the image carries it as a label and `up` refuses a mismatch
-patch_sha256 = "14fb445ecb0aacc75b127a1e25bfc363fa31482d65a320b945082cac82928cb5"
-image = "tf-glm53-exl3:native-v1.0.7"
+patch_sha256 = "addfa5270e8fa28d962d08c6959e577e0b3cea2cea824654060bcb97d30b230e"
+image = "tf-glm53-exl3:native-v1.0.11"
 base_image = "nvcr.io/nvidia/pytorch:26.07-py3@sha256:2140e699b3beaf7f96a0081fd9c9406bc3832b435cdb60dfa2d261f7d2f34a1c"
 container = "tf-glm53-exl3"
 
@@ -60,7 +60,7 @@ head_bits = 8                    # the head the replies are verified with
 draft_head_bits = 4              # the copy MTP drafts read (they only propose); 0: the head itself
 vision = true                    # the vision tower (1 GB, rank 0): images and videos in chat messages
 extra_args = ""
-extra_env = "TF_ROCE_MAX_KB=4096"   # one-shot RoCE gathers up to 4 MiB: 8 streams' partial sums (1 MiB) and 16-row windows (4 MiB) stay off NCCL; 512 cost 24-43% at 8 streams (2026-10-13)
+extra_env = "TF_ROCE_MAX_KB=4096 TF_GLM_WINDOW=8"   # one-shot RoCE gathers up to 4 MiB: 8 streams' partial sums (1 MiB) and 16-row windows (4 MiB) stay off NCCL; 512 cost 24-43% at 8 streams (2026-10-13)
 settle_seconds = 30              # wait after a stop before a rank starts (NCCL's first ibv_reg_mr on the worker)
 memguard = true
 memguard_min_avail_mb = 3072

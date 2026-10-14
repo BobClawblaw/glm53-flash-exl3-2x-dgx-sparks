@@ -1,0 +1,8 @@
+turn 1: prompt 4197 cached 0
+turn 1 again: prompt 4197 cached 4196
+turn 2: prompt 4215 cached 4196
+turn 3: prompt 4233 cached 4214
+RESUME OK
+turn 1: prompt 67021 cached 0 ttft 67.64s
+turn 2: prompt 67049 cached 67020 ttft 0.16s
+turn 3: prompt 67061 cached 67048 ttft 0.11s

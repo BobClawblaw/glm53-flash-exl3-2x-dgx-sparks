@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-15
+
+- **TensorFold v1.0.11** (from v1.0.7): the GLM family rebased onto the current release
+  (`docker/patches/tensorfold-native-v1.0.11-glm.patch`, sha256 `addfa527`; image `tf-glm53-exl3:native-v1.0.11`).
+  Upstream's shared-pool admission and generic lane-backend forwarder replace the patch's copies. Decode, prefill,
+  chat resume and the long replies measure the same as on v1.0.7 (`evidence/2026-10-14/tf-1.0.11/`).
+- **8-row verify windows** (`TF_GLM_WINDOW=8` in the recipe's `extra_env`): JSON 64 -> 74 tok/s, code and SQL +4%,
+  prose, lists and structured the same; repeating a passage verbatim 131 -> 95 tok/s. Against tonyd2wild's NVFP4
+  recipe on its own harness this recipe now leads on every decode prompt (JSON +4.2%, was -9.9%) and on one stream of
+  mixed prompts (+12.2%, was -1.6%). The lever hunt (drafter depth, copy thresholds, confidence cuts) is in
+  `evidence/dev/sweep-2026-10-14/depth/`.
+- **Long contexts measured at 64K, 128K and 256K tokens** (`bench/longctx.py`, new): prefill 1,000 / 959 / 902 tok/s,
+  the buried facts answered at every size, two 64K prompts together in 66 s.
+- **`tf-cuda-test glm-*` exit after their pass or summary line** (rank 0 hung in NCCL's teardown, reported on the
+  upstream PR); the startup line says the family keeps its own prompt states.
+
 ## 2026-10-14 (later)
 
 - **The published checkpoint is the default again** (`ablit = false`): `spark up` needs no Hugging Face account or

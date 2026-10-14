@@ -1,0 +1,205 @@
+{
+  "label": "night-conf85",
+  "started": "2026-10-14 21:56:22",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 3,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "code": {
+      "decode_tok_s": {
+        "median": 72.79,
+        "p90": 74.85,
+        "peak": 74.85,
+        "min": 72.56,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 72.26,
+        "p90": 72.47,
+        "peak": 72.47,
+        "min": 72.02,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.32,
+        "peak": 0.32,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.69,
+        "p90": 9.72,
+        "peak": 9.72,
+        "min": 9.66,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 700,
+      "prompt_tokens": 57,
+      "spec": {}
+    },
+    "json": {
+      "decode_tok_s": {
+        "median": 65.22,
+        "p90": 65.48,
+        "peak": 65.48,
+        "min": 65.09,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 64.83,
+        "p90": 65.1,
+        "peak": 65.1,
+        "min": 63.24,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.09,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.09,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.09,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.09,
+        "n": 3
+      },
+      "total_s": {
+        "median": 12.12,
+        "p90": 12.43,
+        "peak": 12.43,
+        "min": 12.07,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "sql": {
+      "decode_tok_s": {
+        "median": 63.66,
+        "p90": 65.75,
+        "peak": 65.75,
+        "min": 63.47,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 63.23,
+        "p90": 63.3,
+        "peak": 63.3,
+        "min": 63.05,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.35,
+        "peak": 0.35,
+        "min": 0.07,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.35,
+        "peak": 0.35,
+        "min": 0.07,
+        "n": 3
+      },
+      "total_s": {
+        "median": 9.0,
+        "p90": 9.02,
+        "peak": 9.02,
+        "min": 8.99,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 569,
+      "prompt_tokens": 76,
+      "spec": {}
+    },
+    "prose": {
+      "decode_tok_s": {
+        "median": 43.08,
+        "p90": 43.67,
+        "peak": 43.67,
+        "min": 43.04,
+        "n": 3
+      },
+      "e2e_tok_s": {
+        "median": 42.87,
+        "p90": 42.91,
+        "peak": 42.91,
+        "min": 42.8,
+        "n": 3
+      },
+      "ttft_s": {
+        "median": 0.08,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 3
+      },
+      "ttft_answer_s": {
+        "median": 0.08,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 3
+      },
+      "total_s": {
+        "median": 13.86,
+        "p90": 13.88,
+        "peak": 13.88,
+        "min": 13.84,
+        "n": 3
+      },
+      "think_chars": {
+        "median": 0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 3
+      },
+      "completion_tokens": 594,
+      "prompt_tokens": 50,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 21:58:54"
+}

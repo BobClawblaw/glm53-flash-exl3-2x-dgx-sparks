@@ -1,0 +1,111 @@
+{
+  "label": "night-prof16",
+  "started": "2026-10-14 21:37:26",
+  "url": "http://127.0.0.1:8888",
+  "effort": "low",
+  "reps": 2,
+  "rounds": 3,
+  "meta": {
+    "preemptions_total": 0
+  },
+  "single": {
+    "json": {
+      "decode_tok_s": {
+        "median": 64.37,
+        "p90": 64.38,
+        "peak": 64.38,
+        "min": 64.36,
+        "n": 2
+      },
+      "e2e_tok_s": {
+        "median": 63.29,
+        "p90": 63.99,
+        "peak": 63.99,
+        "min": 62.58,
+        "n": 2
+      },
+      "ttft_s": {
+        "median": 0.23,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.09,
+        "n": 2
+      },
+      "ttft_answer_s": {
+        "median": 0.23,
+        "p90": 0.37,
+        "peak": 0.37,
+        "min": 0.09,
+        "n": 2
+      },
+      "total_s": {
+        "median": 12.42,
+        "p90": 12.56,
+        "peak": 12.56,
+        "min": 12.28,
+        "n": 2
+      },
+      "think_chars": {
+        "median": 0.0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 2
+      },
+      "completion_tokens": 786,
+      "prompt_tokens": 81,
+      "spec": {}
+    },
+    "prose": {
+      "decode_tok_s": {
+        "median": 42.78,
+        "p90": 43.0,
+        "peak": 43.0,
+        "min": 42.56,
+        "n": 2
+      },
+      "e2e_tok_s": {
+        "median": 42.28,
+        "p90": 42.4,
+        "peak": 42.4,
+        "min": 42.16,
+        "n": 2
+      },
+      "ttft_s": {
+        "median": 0.19,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 2
+      },
+      "ttft_answer_s": {
+        "median": 0.19,
+        "p90": 0.3,
+        "peak": 0.3,
+        "min": 0.08,
+        "n": 2
+      },
+      "total_s": {
+        "median": 14.05,
+        "p90": 14.09,
+        "peak": 14.09,
+        "min": 14.01,
+        "n": 2
+      },
+      "think_chars": {
+        "median": 0.0,
+        "p90": 0,
+        "peak": 0,
+        "min": 0,
+        "n": 2
+      },
+      "completion_tokens": 594,
+      "prompt_tokens": 50,
+      "spec": {}
+    }
+  },
+  "meta_end": {
+    "preemptions_total": 0
+  },
+  "finished": "2026-10-14 21:38:37"
+}
