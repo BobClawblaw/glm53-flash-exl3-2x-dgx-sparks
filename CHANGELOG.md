@@ -41,7 +41,9 @@
 - **The Ablit weights measured** (`evidence/2026-10-14/ablit/`): one stream 46.1 / 65.7 / 57.8 / 56.2 tok/s (prose /
   code / structured / list, a clean boot), 8 streams 99.6-130.1, 16 streams 127.9-168.9 wall, prefill 991 / 1,001 /
   962 tok/s, a 67K-token chat's turn 2 in 0.14 s. Code decodes about 5% slower than the published checkpoint with
-  shorter replies; prose, structured, list and prefill the same.
+  shorter replies; prose, structured, list and prefill the same. Quality on Ablit: GSM8K 246/250, MMLU 292/342,
+  HumanEval 159/164, IFEval 118 loose / 109 strict, tools 59/60, JSON 30/30, MGSM 221/240 (the published checkpoint:
+  244, 292, 156, 118 / 111, 59, 30, 223). The same recipe on a second pair measures within 2% of this one.
 - **Quality harness.** `quality/soak.py`: the `background` flag shadowed the helper that sends the side decode, so
   every round's background request failed and the check scored itself 0 (the replies were 60/60 equal); the helper is
   `story()` now. `quality/docvision.py`: a picture the server refuses (HTTP 400, e.g. over its 16-megapixel decode
