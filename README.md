@@ -273,7 +273,7 @@ ways within noise.
 | GSM8K (250) | 243/250 (97.2%); fused 244/250 (97.6%) |
 | MGSM (8 languages x 30) | 217/240 (90.4%); fused 223/240 (92.9%) |
 | MMLU (57 subjects x 6) | 294/342 (86.0%); fused 292/342 (85.4%) |
-| MATH-500 | 442/500 (88.4%) |
+| MATH-500 | 442/500 (88.4%) under the grader before 2026-10-19; at least 446 under the current one (CHANGELOG) |
 | GPQA-Diamond | 140/198 (70.7%) |
 | HumanEval (164, sandboxed) | 157/164 (95.7%) pass@1; fused 156/164 (95.1%) |
 | repetition | 8/8: repeated 4-grams 0.25% mean, 0.82% max |

@@ -201,7 +201,15 @@ class ReasoningAndVisionGraders(unittest.TestCase):
         for a, b in (("\\frac{1}{2}", "0.5"), ("\\dfrac{3}{4}", "\\frac34"), ("x = 5", "5"), ("10^\\circ", "10"),
                      ("1,000", "1000"), ("\\text{(C)}", "(C)"), ("2\\sqrt{3}", "2\\sqrt3"), ("6.0", "6"), ("3/4", "0.75")):
             self.assertTrue(math500.same(a, b), (a, b))
-        for a, b in (("\\frac{1}{3}", "0.33"), ("5", "6"), ("(1,2)", "(2,1)")):
+        # forms reasoning replies write: units, {,}, set braces, choice letters, unordered lists, words, spaced matrices
+        for a, b in (("2000 \\text{ calories}", "2000"), ("864 \\text{ square inches}", "864 \\mbox{ inches}^2"),
+                     ("58{,}500", "58,500"), ("\\{3,5,7\\}", "3, 5, 7"), ("-2, 1", "1,-2"), ("C", "\\text{(C)}"),
+                     ("East", "\\text{east}"),
+                     ("\\begin{pmatrix}-2\\\\-14\\end{pmatrix}", "\\begin{pmatrix} -2 \\\\ -14 \\end{pmatrix}")):
+            self.assertTrue(math500.same(a, b), (a, b))
+        for a, b in (("\\frac{1}{3}", "0.33"), ("5", "6"), ("(1,2)", "(2,1)"), ("[1,2)", "(1,2]"), ("2,3", "2,4"),
+                     ("\\text{Navin}", "\\text{Kendra}"), ("12", "12^{\\text{th}}\\text{ grade}x"),
+                     ("\\begin{pmatrix}-2\\\\-14\\end{pmatrix}", "\\begin{pmatrix}-2-14\\end{pmatrix}")):
             self.assertFalse(math500.same(a, b), (a, b))
         self.assertFalse(math500.same(None, "1"))
 

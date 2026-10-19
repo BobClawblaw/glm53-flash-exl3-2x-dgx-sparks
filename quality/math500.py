@@ -1,6 +1,16 @@
 """MATH-500: competition maths (the PRM800K test subset of Hendrycks' MATH), the last \\boxed{} answer compared after
 normalising its LaTeX (the reference's own string rules, plus numeric equality for plain numbers and fractions).
 
+Also accepted (2026-10-19), forms reasoning replies write and the first rules missed:
+- a trailing unit in \\text{} or \\mbox{} after a number (`2000 \\text{ calories}`, `864 \\mbox{ inches}^2`);
+- `{,}` thousands separators (`58{,}500`);
+- set braces around a list (`\\{3,5,7\\}`), a choice letter in parentheses (`(C)` and `C`);
+- a bare list of values in any order (`1,-2` and `-2, 1`); a tuple or interval in brackets keeps its order;
+- a one-word answer in any case (`East` and `\\text{east}`).
+Fixed: `\\ ` (a LaTeX space) was removed even as the second half of a matrix row break `\\\\ `, so a gold matrix
+written with spaces matched no answer. Every miss is kept with its answer (it was the first 40), so a run can be
+regraded later.
+
 GSM8K sits near its ceiling for this model; these problems separate quantizations where GSM8K cannot.
 """
 
@@ -62,14 +72,22 @@ def _fix_fracs(s: str) -> str:
     return out
 
 
+def _unit(m: re.Match) -> str:
+    # a trailing \text{words} after something with a digit is a unit: dropped; anything else is kept as it was
+    return m.group(1) if re.search(r"\d", m.group(1)) else m.group(0)
+
+
 def normalise(s: str) -> str:
     s = s.strip()
+    s = re.sub(r"^(.+?)\s*\\(?:text|mbox)\{\s*[A-Za-z][A-Za-z ]*\}(?:\^\{?\d\}?)?$", _unit, s)
+    s = re.sub(r"^\\\{(.*)\\\}$", r"\1", s)                  # \{a,b\} -> a,b
     s = re.sub(r"\\text\{\s*([^}]*)\}", r"\1", s)
     s = re.sub(r"\\mbox\{\s*([^}]*)\}", r"\1", s)
-    for a, b in (("\n", ""), ("\\!", ""), ("\\,", ""), ("\\;", ""), ("\\ ", ""), ("tfrac", "frac"), ("dfrac", "frac"),
+    for a, b in (("\n", ""), ("{,}", ""), ("\\!", ""), ("\\,", ""), ("\\;", ""), ("tfrac", "frac"), ("dfrac", "frac"),
                  ("\\left", ""), ("\\right", ""), ("^{\\circ}", ""), ("^\\circ", ""), ("\\$", ""), ("$", ""),
                  ("\\%", ""), ("%", ""), ("\\displaystyle", "")):
         s = s.replace(a, b)
+    s = re.sub(r"(?<!\\)\\ ", "", s)                           # a LaTeX space, not a row break's second half
     s = re.sub(r"(degrees?|units?|cm|inches|meters?|dollars?)$", "", s.strip())
     s = re.sub(r"^[a-zA-Z]\s*=\s*", "", s)                     # "x = 5" -> "5"
     s = s.replace(" ", "")
@@ -78,6 +96,7 @@ def normalise(s: str) -> str:
     s = re.sub(r"(\d),(\d{3})(?!\d)", r"\1\2", s)              # 1,000 -> 1000
     s = _fix_fracs(s)
     s = re.sub(r"\\sqrt(\w)", r"\\sqrt{\1}", s)
+    s = re.sub(r"^\(([A-E])\)$", r"\1", s)                   # (C) -> C
     if s == "0.5":
         s = "\\frac{1}{2}"
     s = re.sub(r"^(-?\d+)\.0+$", r"\1", s)
@@ -99,12 +118,31 @@ def _number(s: str) -> Fraction | None:
         return None
 
 
+def _items(s: str) -> list[str] | None:
+    """A bare list's values split at its top-level commas; None for one value or a bracketed tuple or interval."""
+    if s[:1] in "([{" or s[-1:] in ")]}":
+        return None
+    out, depth, at = [], 0, 0
+    for i, ch in enumerate(s):
+        depth += ch in "([{"
+        depth -= ch in ")]}"
+        if ch == "," and depth == 0:
+            out.append(s[at:i])
+            at = i + 1
+    return out + [s[at:]] if out else None
+
+
 def same(pred: str | None, gold: str) -> bool:
     if pred is None:
         return False
     a, b = normalise(pred), normalise(gold)
     if a == b:
         return True
+    if a.isalpha() and b.isalpha():
+        return a.lower() == b.lower()                         # a word answer: East, \\text{east}
+    xa, xb = _items(a), _items(b)
+    if xa and xb and len(xa) == len(xb):
+        return sorted(xa) == sorted(xb)
     x, y = _number(a), _number(b)
     return x is not None and y is not None and abs(x - y) <= Fraction(1, 10 ** 6) * max(1, abs(y))
 
@@ -133,4 +171,4 @@ def run(client: Client, *, n: int = 500, workers: int = 16, max_tokens: int = 40
                   [levels + (f", {unboxed} without a boxed answer" if unboxed else "")],
                   {"n": len(rows), "thinking": thinking, "by_level": by_level, "unboxed": unboxed,
                    "misses": [{"i": i, "gold": r["answer"], "got": got} for i, (r, (hit, got)) in enumerate(zip(rows, outs))
-                              if not hit][:40]})
+                              if not hit]})

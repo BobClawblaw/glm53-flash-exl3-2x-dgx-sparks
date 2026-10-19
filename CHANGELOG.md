@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-19
+
+- **MATH-500's grader accepts more correct forms, and keeps every miss** (`quality/math500.py`). A reasoning model's
+  answers showed the old rules rejecting right answers: DeepSeek-V4.1-Flash scored 451/500 with thinking on and
+  457/500 with it off, though thinking on made fewer real mistakes. Now accepted:
+  - a unit in `\text{}` or `\mbox{}` after a number (`2000 \text{ calories}`);
+  - `{,}` thousands separators;
+  - set braces around a list, a choice letter with or without parentheses;
+  - a bare list of values in any order, and a one-word answer in any case.
+
+  Fixed: the `\ ` rule deleted half of a matrix row break `\\ `, so gold matrices written with spaces matched no
+  answer. Tuples and intervals in brackets still keep their order.
+
+  Regraded from the misses each run kept:
+  - DeepSeek: thinking off at least 465/500, thinking on at least 469/500.
+  - This recipe's 2026-10-13 run: at least 446/500 (was 442).
+
+  "At least" because the old grader kept only the first 40 misses; it now keeps them all.
+
 ## 2026-10-15
 
 - **TensorFold v1.0.11** (from v1.0.7): the GLM family rebased onto the current release
