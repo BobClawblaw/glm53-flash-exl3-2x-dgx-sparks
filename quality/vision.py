@@ -10,6 +10,7 @@ import shutil
 import subprocess
 import tempfile
 import time
+import urllib.error
 from pathlib import Path
 
 from concurrent.futures import ThreadPoolExecutor
@@ -128,7 +129,8 @@ def run(client: Client) -> Result:
 
 def concurrent(client: Client, streams: int = 16) -> Result:
     """The image and video cases ``streams`` at once (each case repeated in turn): every reply equal to the same request
-    alone, and its keywords there."""
+    alone, and its keywords there. A case the server refuses alone (HTTP 400, e.g. video on a server without it) has no
+    reply to compare and is left out of the batch with a note; the vision check fails it."""
     t0 = time.time()
     cases = [(n, [{"type": "image_url", "image_url": {"url": u}} for u in urls], q, kw) for n, urls, q, kw in _images()]
     cases += [(n, [{"type": "video_url", "video_url": {"url": url}}], q, kw) for n, url, q, kw in _videos() if url is not None]
@@ -138,7 +140,17 @@ def concurrent(client: Client, streams: int = 16) -> Result:
         r = client.chat([{"role": "user", "content": parts + [{"type": "text", "text": question}]}], max_tokens=160)
         return strip_think(r["choices"][0]["message"]["content"] or "")
 
-    alone = {c[0]: ask(c) for c in cases}
+    alone, refused = {}, []
+    for c in cases:
+        try:
+            alone[c[0]] = ask(c)
+        except urllib.error.HTTPError as e:
+            if e.code != 400:
+                raise
+            refused.append(c[0])
+    cases = [c for c in cases if c[0] in alone]
+    if not cases:
+        raise RuntimeError(f"every case refused alone: {', '.join(refused)}")
     batch = [cases[i % len(cases)] for i in range(streams)]
     with ThreadPoolExecutor(streams) as ex:
         together = list(ex.map(ask, batch))
@@ -152,4 +164,6 @@ def concurrent(client: Client, streams: int = 16) -> Result:
         elif miss:
             notes.append(f"{case[0]}: missing {['/'.join(g) for g in miss]}")
     notes.insert(0, f"{streams} image/video requests together vs alone")
+    if refused:
+        notes.insert(1, f"refused alone (HTTP 400), not run together: {', '.join(refused)}")
     return Result("vision-concurrent", passed / streams, streams, passed, time.time() - t0, notes, {"alone": alone, "together": together})
