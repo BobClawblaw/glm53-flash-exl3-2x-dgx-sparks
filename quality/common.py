@@ -19,12 +19,36 @@ class Client:
 
     def __init__(self, url: str, model: str = "default", timeout: int = 7200) -> None:
         self.url, self.model, self.timeout = url.rstrip("/"), model, timeout
+        self._switch: bool | None = None  # the served model's thinking_switch capability, read on first use
+
+    def template_kwargs(self, thinking: bool) -> dict:
+        """``chat_template_kwargs`` for a request: thinking off is sent only to a model whose template can switch it
+        off (TensorFold's ``thinking_switch`` capability; a server that doesn't say gets the flag). A model with no
+        switch, such as Recursive Flint, refuses an explicit off and reasons as it always does without the flag."""
+        if thinking:
+            return {"enable_thinking": True}
+        if self._switch is None:
+            self._switch = True
+            try:
+                with urllib.request.urlopen(self.url + "/v1/models", timeout=30) as r:
+                    for m in json.load(r).get("data") or []:
+                        if m.get("id") == self.model and (m.get("capabilities") or {}).get("thinking_switch") is False:
+                            self._switch = False
+            except Exception:
+                pass
+        return {"enable_thinking": False} if self._switch else {}
+
+    def answer_tokens(self, n: int) -> int:
+        """A thinking-off check's ``max_tokens``: ``n`` for the answer, plus room for the reasoning a model with no
+        switch writes first (its ``content`` is empty when the reasoning alone fills ``n``)."""
+        self.template_kwargs(False)
+        return n + 4096 if self._switch is False else n
 
     def chat(self, messages: list[dict], *, max_tokens: int = 512, temperature: float = 0.0, thinking: bool = False,
              tools: list | None = None, response_format: dict | None = None, draft: bool | None = None,
              extra: dict | None = None) -> dict:
         body: dict = {"model": self.model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature,
-                      "stream": False, "chat_template_kwargs": {"enable_thinking": thinking}}
+                      "stream": False, "chat_template_kwargs": self.template_kwargs(thinking)}
         if tools:
             body["tools"] = tools
         if response_format:

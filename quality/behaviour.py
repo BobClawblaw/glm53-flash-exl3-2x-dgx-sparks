@@ -21,7 +21,7 @@ from .common import Client, Result, strip_think, text_of
 
 def _stream(client: Client, messages: list[dict], max_tokens: int, extra: dict | None = None) -> tuple[str, int]:
     body = {"model": client.model, "messages": messages, "max_tokens": max_tokens, "temperature": 0, "stream": True,
-            "stream_options": {"include_usage": True}, "chat_template_kwargs": {"enable_thinking": False}}
+            "stream_options": {"include_usage": True}, "chat_template_kwargs": client.template_kwargs(False)}
     body.update(extra or {})
     req = urllib.request.Request(client.url + "/v1/chat/completions", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
@@ -102,7 +102,7 @@ def run(client: Client) -> list[Result]:
     reply = ""
     for user, _ in TURNS:
         msgs.append({"role": "user", "content": user})
-        reply = text_of(client.chat(msgs, max_tokens=200))
+        reply = text_of(client.chat(msgs, max_tokens=client.answer_tokens(200)))
         msgs.append({"role": "assistant", "content": reply})
     want = TURNS[-1][1]
     hits = sum(1 for w in want if re.search(w, reply, re.I))
@@ -114,8 +114,9 @@ def run(client: Client) -> list[Result]:
              ("Write the alphabet in capitals separated by spaces.", "M")]
     ok = 0
     for p, stop in cases:
-        d = client.chat([{"role": "user", "content": p}], max_tokens=200, extra={"stop": [stop]})
-        t = text_of(d)
+        d = client.chat([{"role": "user", "content": p}], max_tokens=client.answer_tokens(200), extra={"stop": [stop]})
+        # the string stops the reply wherever it falls, in reasoning a model cannot switch off as well as in content
+        t = (d["choices"][0]["message"].get("reasoning_content") or "") + text_of(d)
         ok += int(stop not in t and len(t) > 0)
     results.append(Result("stop", ok / len(cases), len(cases), ok, time.time() - t0, [f"{ok}/{len(cases)} stopped before the string"]))
     # thinking
